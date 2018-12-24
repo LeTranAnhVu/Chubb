@@ -1,0 +1,87 @@
+/////////////////////////
+///////Include//////////
+@import '../../sass/var'
+////////////////////////
+
+.stept_4
+	background: $xam
+	+pad(2rem 0)
+	@media screen and(min-width: 720px)
+		+pad(3.5rem 0 rem(60px) 0)
+	h2 
+		color: $den-1
+		+fw(600)
+		+fz(1.28rem)
+		margin-bottom: 2rem
+	.total
+		background: white
+		+bor-rad(20px)
+		box-shadow: 0px 20px 40px 0px rgba(19, 28, 35, 0.1)
+		+pad(2rem)
+		table 
+			width: 100%
+			margin-bottom: 1.4rem
+			&:last-child
+				margin-bottom: 0
+			tr 
+				width: 100%
+				th 
+					text-align-last: left
+					background: #e8f3d7
+					+pad(.7rem 1.4rem)
+					color: $den-1
+					+fz(1.28rem)
+					+fw(600)
+					p 
+						+fw(400)
+				td 
+					border: 1px solid $table
+					+pad(1rem)
+					color: #666666
+					&:first-child
+						+fw(700)
+						+fz(1rem)
+						color: $den-1
+						padding-left: rem(21px)
+	.pric
+		margin-top: 2.8rem
+		+pad(0 2.1rem)
+		h4 
+			font-style: italic
+			+fz(1.14rem)
+			color: $den-1
+			+fw(400)
+	.conf
+		margin-top: 1.15rem
+		.check
+			color: $den-1
+			+fz(1.1rem)
+			+fw(bold)
+		ul 
+			padding-left: 1.4rem
+			list-style: decimal
+			li 
+				margin-top: 1rem
+				p 
+					+fw(500)
+					+fz(1rem)
+					font-style: normal
+		.next-stept
+			text-align: right
+			margin-top: rem(60px)
+			.btn
+				width: 12.8rem
+				display: inline-block
+				+bor-rad(20px)
+				text-align: center
+				line-height: rem(40px)
+				color: white
+				text-decoration: none
+				height: rem(40px)
+				+fz(1rem)
+				+fw(bold)
+				&.prev
+					background: $den-2
+					margin-right: .7rem
+				&.next
+					background: $xanh-la

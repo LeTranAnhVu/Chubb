@@ -15,6 +15,7 @@ import { HeaderComponent } from './lib/header/header.component';
 import { FooterComponent } from './lib/footer/footer.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ProductComponent } from './pages/product/product.component';
+import { Buyonline4Component } from './pages/buyonline4/buyonline4.component';
 //////////////////////
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProductComponent } from './pages/product/product.component';
     HeaderComponent,
     FooterComponent,
     AboutComponent,
-    ProductComponent],
+    ProductComponent,
+    Buyonline4Component],
   imports: [
     BrowserModule,
     FormsModule,
