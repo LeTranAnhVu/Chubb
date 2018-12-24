@@ -5,19 +5,30 @@ import { AppRoutingModule } from './app-routing.module';
 
 
 import { AppComponent } from './app.component';
-import { AboutComponent } from './components/about/about.component';
-import { ProductComponent } from './components/product/product.component';
 
+/// Bootstrap /////////
+import {NgbCarouselModule, NgbModalModule, NgbDropdownModule, NgbCollapseModule} from '@ng-bootstrap/ng-bootstrap';
+import { HeaderComponent } from './lib/header/header.component';
+import { FooterComponent } from './lib/footer/footer.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ProductComponent } from './pages/product/product.component';
+//////////////////////
 @NgModule({
   declarations: [
     AppComponent , 
+    HeaderComponent,
+    FooterComponent,
     AboutComponent,
     ProductComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbCarouselModule,
+    NgbModalModule,
+    NgbDropdownModule,
+    NgbCollapseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

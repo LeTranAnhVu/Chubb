@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AboutComponent } from '../app/components/about/about.component';
-import { ProductComponent } from '../app/components/product/product.component';
+
+import { AboutComponent } from '../app/pages/about/about.component';
+import { ProductComponent } from '../app/pages/product/product.component';
 
 
 
