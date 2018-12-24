@@ -22,7 +22,8 @@
             ],
             "styles": [
               "src/styles.sass",
-              "./bower_components/bootstrap/scss/bootstrap-grid.scss"
+              "./bower_components/bootstrap/scss/bootstrap-grid.scss",
+              "./bower_components/font-awesome/css/fontawesome.min.css"
             ],
             "scripts": []
           },
