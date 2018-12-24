@@ -2,3 +2,63 @@
 ///////Include//////////
 @import '../../sass/var'
 ////////////////////////
+footer 
+	+pad(2rem 0)
+	background: $den-2
+	width: 100%
+	.top
+		border-bottom: 1px solid #84898e
+		padding-bottom: rem(20px)
+		.block
+			margin-top: 1rem
+			&:first-child
+				margin-top: 0
+			ul 
+				li 
+					display: inline-block
+					width: 50px 
+					height: 50px
+					background: $xanh-la
+					text-align: center
+					margin-right: .5rem
+					line-height: 50px
+					&:nth-child(2)
+						background: $xanh-duong
+					&:nth-child(3)
+						background: $do
+					a 
+						color: white
+						+fz(rem(18px))
+			h5 
+				color: white
+				+fz(1rem)
+				+fw(400)
+	@media screen and(min-width: 720px)
+		.top
+			.block
+				border-right: 1px solid $border
+				margin-top: 0
+				&:last-child
+					border: 0
+	.bottom
+		padding-top: rem(20px)
+		color: white
+		small
+			+fz(.9rem)
+			color: $den-3
+			display: block
+			margin-top: .5rem
+		p 
+			margin-top: .5rem
+			margin-bottom: 0
+			+fz(.9rem)
+			color: $den-3
+			&.right
+				margin-top: .5rem
+				@media screen and(min-width: 720px)
+					margin-top: 0
+		a 
+			color: white
+			text-decoration: none
+			+fz(.85rem)
+			+fw(400)

@@ -1,0 +1,11 @@
+$breakpoints: (sm: 20rem,
+md: 31.25rem,
+lg: 62rem,
+xl: 75rem)   
+// ~600px
+// ~1024px
+// ~1280px
+// ~1440px
+=breakpoint($breakpoint)
+  	@media only screen and (min-width: map-get($map: $breakpoints, $key: $breakpoint))
+	  	@content 

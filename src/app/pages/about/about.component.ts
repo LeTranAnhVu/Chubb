@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-about',
+  // tslint:disable-next-line:component-selector
+  selector: 'ngbd-accordion-basic',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.sass']
 })

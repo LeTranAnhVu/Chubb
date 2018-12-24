@@ -1,0 +1,24 @@
+{
+    "menu": [
+        {
+            "name": "Trang chủ",
+            "icon": "mdi mdi-home",
+            "url": "/"
+        },
+        {
+            "name": "Về Chubb",
+            "icon": "",
+            "url": "/about"
+        },
+        {
+            "name": "Sản phẩm",
+            "icon": "",
+            "url": "/product"
+        },
+        {
+            "name": "Giải quyết Quyền lợi Bảo Hiểm",
+            "icon": "",
+            "url": "/resolve benefits"
+        }
+    ]
+}
