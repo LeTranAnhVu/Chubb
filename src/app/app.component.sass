@@ -141,7 +141,7 @@
 
 // Sản phẩm
 
-.canhcam-home-product
+::ng-deep .canhcam-home-product
     +pad(rem(30px) null)
     background: #f5f5f5
     .title
@@ -172,32 +172,219 @@
                     +lh(rem(18px))
                     margin-left: rem(6px)
                     display: inline-block
+    h4
+        color: #333333
+        +fz(rem(18px))
+        margin-bottom: rem(18px)
+        padding-top: rem(23px)
+    .product-wrap
+        width: 100%
+        .item
+            margin-bottom: 1.3rem
+            figure
+                margin-bottom: 0
+                background: #ffffff
+                height: 100%
+                display: flex
+                flex-direction: column
+                .boxzoom
+                    img
+                        width: 100%
+                figcaption
+                    +pad(rem(28px) rem(20px) rem(20px) rem(20px))
+                    display: flex
+                    flex-direction: column
+                    height: 100%
+                    .content
+                        margin-bottom: auto
+                    h3
+                        +fz(rem(24px))
+                        color: #333333
+                        +fw(600)
+                        margin-bottom: rem(5px)
+                    h5
+                        +fz(rem(18px))
+                        color: #333333
+                        margin-bottom: rem(16px)
+                    p
+                        +fz(1rem)
+                        color: #333333 
+                    .group-btn
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        margin-top: 1rem
+                        a
+                            display: inline-block
+                            +fz(1rem)
+                        .buy-btn
+                            a
+                                +pad(rem(12px) rem(40px))
+                                color: #ffffff
+                                background: #333333
+                        .more-btn
+                            a
+                                text-decoration: underline
+                                color: #333333
+                                text-underline-position: under
+                                &:after
+                                    content: '\f140'
+                                    font-family: 'Material Design Icons'
+                                    +fz(rem(18px))
+                                    +lh(rem(18px))
+                                    color: #333333
+                                    display: inline-block
+                                    margin-left: rem(8px)
+            &:first-child
+                figure
+                    +box-sha(inset 0 -4px 0 0 $xanh-la)
+                    figcaption
+                        h5
+                            color: $xanh-la
+                        .group-btn
+                            .buy-btn
+                                a
+                                    background: $xanh-la
+            &:nth-child(2)
+                figure
+                    +box-sha(inset 0 -4px 0 0 $cam)
+                    figcaption
+                        h5
+                            color: $cam
+                        .group-btn
+                            .buy-btn
+                                a
+                                    background: $cam
+            &:last-child
+                margin-bottom: 0
+                figure
+                    +box-sha(inset 0 -4px 0 0 $tim)
+                    figcaption
+                        h5
+                            color: $tim
+                        .group-btn
+                            .buy-btn
+                                a
+                                    background: $tim
     @media screen and (min-width: 578px)
         +pad(rem(50px) null rem(60px) null)
         .title
             .seemore
                 a
                     +transition(color .3s ease-in-out)
-                    &:before
-                        content: ''
-                        display: block
-                        width: 100%
-                        height: 0
-                        background: #333333
-                        +transition(height 0.3s cubic-bezier(0.815, 1.650, 0.400, 0.680))
-                        +pos(abs , null null 0 0)
-                        z-index: -1
+                    +transition(height 0.3s cubic-bezier(0.815, 1.650, 0.400, 0.680))
                     &:after
                         // position: relative
                         // z-index: 1
                         +transition(color .3s ease-in-out)
                     &:hover
                         color: #ffffff
+                        background: #333333
                         &:before
                             height: 100%
                         &:after
-                            color: #ffffff 
+                            color: #ffffff
+        .product-wrap
+            +mar(null 'calc( -14px / 2 )')
+            .item
+                +pad(null 'calc( 14px / 2 )')
+    @media screen and (min-width: 992px)
+        .product-wrap
+            .item
+                margin-bottom: 0
+                figure
+                    +transition(transform .3s ease-in-out)
+                    &:hover
+                        +box-sha(0 2px 12px 0 rgba(0,0,0,0.35))
+                        +transform(translateY(-5px))
 
+
+
+// Support
+
+.canhcam-home-support
+    +pad(rem(30px) null)
+    h2
+        margin-bottom: rem(22px)
+    .item
+        margin-bottom: 1.3rem
+        figure
+            margin-bottom: 0
+            background: #f5f5f5
+            height: 100%
+            min-height: rem(220px)
+            figcaption
+                +pad(rem(28px) rem(20px) rem(30px) rem(20px))
+                display: flex
+                flex-direction: column
+                height: 100%
+                .content
+                    margin-bottom: auto
+                h3
+                    +fz(rem(18px))
+                    color: #333333
+                    +fw(700)
+                    margin-bottom: rem(15px)
+                .phone
+                    display: flex
+                    .phone-img
+                        width: rem(40px)
+                        height: rem(40px)
+                        line-height: rem(40px)
+                        text-align: center
+                        background: #e50189
+                    .phone-text
+                        width: rem(110px)
+                        height: rem(40px)
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        color: #ffffff
+                        +fw(600)
+                        background: $hong
+                        span
+                            +fz(rem(24px))
+                            &:first-child
+                                margin-right: .4rem
+                .email
+                    color: $tim
+                    text-decoration: underline
+                    text-underline-position: under
+                .seemore
+                    a
+                        width: rem(150px)
+                        height: rem(40px)
+                        +lh(rem(40px))
+                        text-align: center
+                        color: #333333
+                        +fz(1rem)
+                        position: relative
+                        +box-sha(inset 0 0 0 1px #333333)
+                        +flex-center()
+                        text-decoration: none
+                        &:after
+                            content: '\f142'
+                            font-family: 'Material Design Icons'
+                            +fz(rem(18px))
+                            +lh(rem(18px))
+                            margin-left: rem(6px)
+                            display: inline-block
+        &:first-child
+            figure
+                +box-sha(inset 0 -4px 0 0 $hong)
+        &:nth-child(2)
+            figure
+                +box-sha(inset 0 -4px 0 0 $tim)
+        &:last-child
+            margin-bottom: 0
+            figure
+                +box-sha(inset 0 -4px 0 0 $vang) 
+
+    @media screen and (min-width: 578px)
+        +pad(rem(50px) null rem(60px) null)
+    @media screen and (min-width: 992px)
+        .item
+            margin-bottom: 0
 
 
 
