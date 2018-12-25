@@ -3,3 +3,94 @@
 @import '../../sass/var'
 ////////////////////////
 
+
+.about
+  .banner-container
+    padding: 0
+    position: relative
+    .img-fluid
+      width: 100%
+    .img-banner
+      min-height: rem(400px)
+      object-fit: cover
+    .page-title
+      padding: rem(20px)
+      h3
+        font-size: rem(25px)
+        box-shadow: -5px 0 0 0 $xanh-la
+        padding-left: rem(20px)
+        font-weight: normal
+    @media screen and (min-width: 768px)
+      .page-title
+        position: absolute
+        bottom: rem(70px)
+        left: 10%
+        padding: rem(20px)
+        h3
+          color: #ffffff
+          font-size: rem(30px)
+    @media screen and (min-width: 992px)
+      .page-title
+        bottom: rem(50px)
+        left: 10%
+        padding: rem(30px)
+        h3
+          color: #ffffff
+          font-size: rem(40px)
+    @media screen and (min-width: 1200px)
+      .page-title
+        bottom: rem(60px)
+        left: 10%
+        padding: rem(30px)
+        h3
+          color: #ffffff
+          font-size: rem(40px)
+  .content-container
+    padding-bottom: rem(60px)
+    .outer-box
+      padding: rem(30px)
+      background: url('../../../assets/img/about/about_content_bg.png') no-repeat center center
+      background-size: cover
+    .content-box-01
+      color: #323232
+      padding: rem(25px) rem(10px)
+    .content-box-02
+      color: #ffffff
+      background: #01c1d6
+      padding: rem(25px) rem(10px)
+
+
+    .content-box
+      .title
+        margin-bottom: rem(28px)
+        font-size: rem(25px)
+        font-weight: normal
+      p
+        margin-bottom: rem(20px)
+        font-weight: normal
+        font-size: rem(16px)
+        &:last-child
+          margin-bottom: 0
+
+
+    @media screen and (min-width: 992px)
+      .content-box-01
+        margin-left: rem(220px)
+        padding: rem(45px) 0
+
+      .outer-box
+        padding: rem(140px) 0 0 rem(140px)
+      .content-box-02
+        // margin-left: rem(220px)
+        padding: rem(45px)
+      .content-box
+        .title
+          font-size: rem(35px)
+        p
+          margin-bottom: rem(30px)
+          font-weight: bold
+
+
+
+
+

@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
 
   constructor() { }
-
+  banner = '../../../assets/img/about/about_banner.png';
   ngOnInit() {
   }
 

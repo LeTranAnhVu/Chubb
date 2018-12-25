@@ -11,6 +11,7 @@ import { MuaOnlineBuoc2Component } from './pages/mua-online-buoc2/mua-online-buo
 
 
 
+
 const routes: Routes = [
     {path: 'about' , component: AboutComponent},
     {path: 'product' , component: ProductComponent},
