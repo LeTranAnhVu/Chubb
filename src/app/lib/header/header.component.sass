@@ -2,8 +2,6 @@
 ///////Include//////////
 @import '../../sass/var'
 ////////////////////////
-
-
 .canhcam__header
     +box-sha(0 1px 6px 0 rgba(32,33,36,0.28))
     .header__wrap--inner
@@ -54,8 +52,11 @@
                             text-decoration: none
                             +fz(rem(16px))
                             color: #ffffff
-                            display: block
+                            display: inline-block
                             padding-bottom: rem(28px)
+                            .mdi
+                                +fz(rem(18px))
+                                +lh(rem(18px))
             .header__phone
                 a
                     text-decoration: none
@@ -92,8 +93,48 @@
                 padding: rem(15px)
                 +transform(translateX(-100%))
                 +transition(transform .4s ease-in-out)
+                .header__nav
+                    ul
+                        li
+                            a
+                                position: relative
+                                +transform(translateX(-500%))
+                                +transition(transform .3s cubic-bezier(.17,.67,.83,.67))
+                                &:before
+                                    content: ''
+                                    width: 0
+                                    height: 2px
+                                    background: #ffffff
+                                    +pos(abs , .5rem -3rem null null)
+                                    transition: width .3s ease-in-out
+                                &.active , &:focus , &:active
+                                    &:before
+                                        width: rem(30px)
+                            &:nth-child(1)
+                                a
+                                    transition-delay: .35s
+                            &:nth-child(2)
+                                a
+                                    transition-delay: .45s
+                            &:nth-child(3)
+                                a
+                                    transition-delay: .55s
+                            &:nth-child(4)
+                                a
+                                    transition-delay: .65s
+                .header__phone
+                    +transform(translateX(-100%))
+                    +transition(transform .3s cubic-bezier(.17,.67,.83,.67))
+                    transition-delay: .75s
                 &.header__menu--active
                     +transform(translateX(0))
+                    .header__nav
+                        ul
+                            li
+                                a
+                                    +transform(translateX(0))
+                    .header__phone
+                        +transform(translateX(0))
             .header__overlay
                 +pos(fixed , rem(70px) 0 null null)
                 z-index: 99
