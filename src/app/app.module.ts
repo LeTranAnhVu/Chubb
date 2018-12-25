@@ -28,7 +28,7 @@ import { Buyonline4Component } from './pages/buyonline4/buyonline4.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,ReactiveFormsModule, HttpClientModule,
+    AppRoutingModule, ReactiveFormsModule, HttpClientModule,
     NgbModule
   ],
   providers: [],
