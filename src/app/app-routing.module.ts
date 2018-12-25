@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from '../app/pages/about/about.component';
-import { Buyonline4Component } from '../app/pages/buyonline4/buyonline4.component';
 import { ProductComponent } from '../app/pages/product/product.component';
-import { Buyonline3Component } from './pages/buyonline3/buyonline3.component';
-import { Buyonline5Component } from './pages/buyonline5/buyonline5.component';
-import { Buyonline6Component } from './pages/buyonline6/buyonline6.component';
-
+import { MuaOnlineBuoc3NhapOTPComponent } from './pages/mua-online-buoc3-nhap-otp/mua-online-buoc3-nhap-otp.component';
+import { MuaOnlineBuoc4Component } from './pages/mua-online-buoc4/mua-online-buoc4.component';
+import { MuaOnlineBuoc5Component } from './pages/mua-online-buoc5/mua-online-buoc5.component';
+import { MuaOnlineBuoc6HoanthanhComponent } from './pages/mua-online-buoc6-hoanthanh/mua-online-buoc6-hoanthanh.component';
 
 
 
@@ -15,8 +14,10 @@ import { Buyonline6Component } from './pages/buyonline6/buyonline6.component';
 const routes: Routes = [
     {path: 'about' , component: AboutComponent},
     {path: 'product' , component: ProductComponent},
-    {path: 'buyonline3' , component: Buyonline3Component},
-    {path: 'buyonline4' , component: Buyonline4Component},{path: 'buyonline5' , component: Buyonline5Component},{path: 'buyonline6' , component: Buyonline6Component}
+    {path: 'mua-online-buoc3-nhap-otp' , component: MuaOnlineBuoc3NhapOTPComponent},
+    {path: 'mua-online-buoc4' , component: MuaOnlineBuoc4Component},
+    {path: 'mua-online-buoc5' , component: MuaOnlineBuoc5Component},
+    {path: 'mua-online-buoc6-hoanthanh' , component: MuaOnlineBuoc6HoanthanhComponent}
 ];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
