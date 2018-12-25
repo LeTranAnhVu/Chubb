@@ -14,6 +14,8 @@ import { MuaOnlineBuoc1Component } from './pages/mua-online-buoc1/mua-online-buo
 import { MuaOnlineBuoc2Component } from './pages/mua-online-buoc2/mua-online-buoc2.component';
 import { ProductComponent } from './pages/product/product.component';
 import { ThongTinNguoiDuocBaoHiemComponent } from './lib/forms/thong-tin-nguoi-duoc-bao-hiem/thong-tin-nguoi-duoc-bao-hiem.component';
+import { ThongTinBenMuaBaoHiemComponent } from './lib/forms/thong-tin-ben-mua-bao-hiem/thong-tin-ben-mua-bao-hiem.component';
+import { ThongTinLienLacComponent } from './lib/forms/thong-tin-lien-lac/thong-tin-lien-lac.component';
 
 
 
@@ -29,7 +31,9 @@ import { ThongTinNguoiDuocBaoHiemComponent } from './lib/forms/thong-tin-nguoi-d
     Buyonline4Component,
     MuaOnlineBuoc1Component,
     MuaOnlineBuoc2Component,
-    ThongTinNguoiDuocBaoHiemComponent],
+    ThongTinNguoiDuocBaoHiemComponent,
+    ThongTinBenMuaBaoHiemComponent,
+    ThongTinLienLacComponent],
   imports: [
     BrowserModule,
     FormsModule,
