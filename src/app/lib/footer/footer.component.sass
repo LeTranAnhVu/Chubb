@@ -14,32 +14,55 @@ footer
 			&:first-child
 				margin-top: 0
 			ul 
+				display: flex
 				li 
-					display: inline-block
-					width: 50px 
-					height: 50px
-					background: $xanh-la
-					text-align: center
-					margin-right: .5rem
-					line-height: 50px
-					&:nth-child(2)
-						background: $xanh-duong
-					&:nth-child(3)
-						background: #f12b2b
 					a 
 						color: white
 						+fz(rem(18px))
+						width: rem(50px)
+						height: rem(50px)
+						background: $xanh-la
+						display: inline-block
+						text-align: center
+						margin-right: .5rem
+						line-height: rem(50px)
+					&:nth-child(2)
+						a 
+							background: $xanh-duong
+					&:nth-child(3)
+						a
+							background: #f12b2b
+					&:last-child
+						a
+							margin-right: 0
 			h5 
 				color: white
 				+fz(1rem)
 				+fw(400)
-	@media screen and(min-width: 720px)
+				+lh(1.3rem)
+	@media screen and(min-width: 768px)
 		.top
 			.block
-				border-right: 1px solid #84898e
 				margin-top: 0
+				&:after
+					content: ''
+					+pos(abs, 0 0 null null)
+					background: #84898e
+					width: 1px
+					height: 60px
 				&:last-child
-					border: 0
+					&:after
+						content: none
+				ul 
+					li
+						a
+							width: rem(40px)
+							height: rem(40px)
+							line-height: rem(40px)
+							@media screen and(min-width: 992px)
+								width: rem(50px)
+								height: rem(50px)
+								line-height: rem(50px)
 	.bottom
 		padding-top: rem(20px)
 		color: white
