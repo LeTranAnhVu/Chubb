@@ -4,7 +4,9 @@
 ////////////////////////
 
 .online3
-	+pad(rem(50px))
+	+pad(rem(30px))
+	@media screen and(min-width: 720px)
+		+pad(rem(50px))
 	label
 		+fw(600)
 		+fz(rem(16px))
@@ -14,14 +16,37 @@
 		padding: .375rem .75rem
 		font-size: 1rem
 		color: #495057
-		height: rem(45px)
+		height: rem(42px)
 		background-color: #fff
 		background-clip: padding-box
-		border: 1px solid #ced4da
-		border-radius: .25rem
+		border: 2px solid #ebebeb
+		border-radius: rem(4px)
 		transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out
 		&:focus
 			outline: none
 		+placeholder()
 			+lh(rem(45px))
 			color: #999
+.next-stept
+	display: flex
+	width: 100%
+	justify-content: flex-end
+	margin-top: rem(30px)
+	@media screen and(min-width: 720px)
+		margin-top: rem(30px)
+	.btn
+		width: 12.8rem
+		display: inline-block
+		+bor-rad(20px)
+		text-align: center
+		line-height: rem(40px)
+		color: white
+		text-decoration: none
+		height: rem(40px)
+		+fz(1rem)
+		+fw(bold)
+		&.prev
+			background: $den-2
+			margin-right: .7rem
+		&.next
+			background: $xanh-la
