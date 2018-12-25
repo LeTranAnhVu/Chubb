@@ -1,21 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
-
-
-import { AppComponent } from './app.component';
-
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 /// Bootstrap /////////
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HeaderComponent } from './lib/header/header.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { FooterComponent } from './lib/footer/footer.component';
+import { HeaderComponent } from './lib/header/header.component';
 import { AboutComponent } from './pages/about/about.component';
-import { ProductComponent } from './pages/product/product.component';
 import { Buyonline4Component } from './pages/buyonline4/buyonline4.component';
+import { MuaOnlineBuoc1Component } from './pages/mua-online-buoc1/mua-online-buoc1.component';
+import { MuaOnlineBuoc2Component } from './pages/mua-online-buoc2/mua-online-buoc2.component';
+import { ProductComponent } from './pages/product/product.component';
+import { ThongTinNguoiDuocBaoHiemComponent } from './lib/forms/thong-tin-nguoi-duoc-bao-hiem/thong-tin-nguoi-duoc-bao-hiem.component';
+
+
+
+
 //////////////////////
 @NgModule({
   declarations: [
@@ -24,7 +26,10 @@ import { Buyonline4Component } from './pages/buyonline4/buyonline4.component';
     FooterComponent,
     AboutComponent,
     ProductComponent,
-    Buyonline4Component],
+    Buyonline4Component,
+    MuaOnlineBuoc1Component,
+    MuaOnlineBuoc2Component,
+    ThongTinNguoiDuocBaoHiemComponent],
   imports: [
     BrowserModule,
     FormsModule,
