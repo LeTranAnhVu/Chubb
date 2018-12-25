@@ -17,6 +17,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ProductComponent } from './pages/product/product.component';
 import { Buyonline4Component } from './pages/buyonline4/buyonline4.component';
 import { Buyonline5Component } from './pages/buyonline5/buyonline5.component';
+import { Buyonline6Component } from './pages/buyonline6/buyonline6.component';
 //////////////////////
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { Buyonline5Component } from './pages/buyonline5/buyonline5.component';
     AboutComponent,
     ProductComponent,
     Buyonline4Component,
-    Buyonline5Component],
+    Buyonline5Component,
+    Buyonline6Component],
   imports: [
     BrowserModule,
     FormsModule,
