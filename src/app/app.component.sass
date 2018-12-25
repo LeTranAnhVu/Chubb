@@ -5,4 +5,27 @@
 ////////////////////////
 
 
-h1
+::ng-deep .canhcam-home-banner
+    .carousel , .carousel-inner
+        &:focus
+            outline: none
+    .carousel-inner
+        .carousel-item
+            img
+                width: 100%
+                min-height: rem(300px)
+                object-fit: cover
+            .carousel-caption
+                text-align: left
+                h3
+                    margin-bottom: 1rem
+                    @media screen and (min-width: 992px)
+                        +fz(rem(36px))
+                p
+                    +fz(rem(16px))
+                    margin-bottom: rem(20px)
+                a
+                    +fz(1rem)
+                    color: #ffffff
+                    text-decoration: none
+                    display: inline-block

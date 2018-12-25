@@ -3,7 +3,13 @@
 @import '../../sass/var'
 ////////////////////////
 .canhcam__header
-    +box-sha(0 1px 6px 0 rgba(32,33,36,0.28))
+    +transition(all .5s ease-in-out)
+    &.active
+        position: fixed
+        z-index: 999
+        top: 0
+        left: 0
+        width: 100%
     .header__wrap--inner
         height: 100%
         display: flex
@@ -146,6 +152,9 @@
                 &.header__overlay--active
                     +transform(translateX(0))
     @media screen and (min-width: 992px)
+        +pos(abs , 0 null null 0)
+        width: 100%
+        z-index: 999
         .header__wrap
             .header__wrap--inner
                 +box-sha(inset 0 -1px 0 0 color-rgba(#ffffff , .5))
@@ -176,6 +185,21 @@
                                 &:hover , &.active
                                     &:before
                                         +transform(scale(1))
+                                &.active
+                                    &:before
+                                        bottom: -3px
+        &.active
+            background: $xanh-la
+            +box-sha(0 1px 6px 0 rgba(32,33,36,0.28))
+            .header__wrap
+                .header__wrap--inner
+                    box-shadow: none
+                    .header__menu
+                        li
+                            a
+                                &.active , &:hover
+                                    &:before
+                                        background: #ffffff
     @media screen and (min-width: 1200px)
         .header__wrap
             .header__menu

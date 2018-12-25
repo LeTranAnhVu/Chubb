@@ -1,3 +1,75 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-header></app-header>
+<!--Banner-->
+<div class="canhcam-home-banner">
+  <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <img [src]="images[0]" alt="Random first slide">
+      <div class="carousel-caption">
+        <div class="title">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h3>
+                  Trang giao dịch bảo hiểm trực tuyến
+                  <br>
+                  Chubb Life Việt Nam
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img [src]="images[1]" alt="Random second slide">
+      <div class="carousel-caption">
+        <div class="title">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h3>
+                  Tham gia bảo hiểm nhân thọ
+                  <br>
+                  chỉ với 3 thao tác
+                </h3>
+                <p>
+                  Chọn gói bảo hiểm phù hợp – Điển thông tin cá nhân –
+                  <br>
+                  Thanh toán trực tuyến dễ dàng
+                </p>
+                <a href="">Tìm hiểu thêm </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <img [src]="images[2]" alt="Random third slide">
+      <div class="carousel-caption">
+        <div class="title">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h3>
+                  Chỉ mất vài phút để được
+                  <br>
+                  bảo vệ dài lâu
+                </h3>
+                <p>
+                  Tự tin chinh phục mọi mục tiêu!
+                </p>
+                <a href="">Tìm hiểu thêm </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
 <app-footer></app-footer>

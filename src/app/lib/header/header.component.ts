@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
@@ -18,5 +17,16 @@ export class HeaderComponent implements OnInit {
     menuBtn.classList.toggle('header__trigger--open');
     header__menu.classList.toggle('header__menu--active');
     header__overlay.classList.toggle('header__overlay--active');
+  }
+  @HostListener('window:scroll', [])
+  headerScroll() {
+    let number = window.pageYOffset;
+    let header = document.getElementById('canhcam__header');
+    if (number > 150) {
+      header.classList.add('active');
+    } else {
+      header.classList.remove('active');
+    } 
+
   }
 }
