@@ -98,3 +98,26 @@
 									+bor-rad(50%)
 									+pos(abs, 0 null null 0 )
 									display: block
+.next-stept
+	display: flex
+	width: 100%
+	justify-content: flex-end
+	margin-top: rem(30px)
+	@media screen and(min-width: 720px)
+		margin-top: rem(30px)
+	.btn
+		width: 12.8rem
+		display: inline-block
+		+bor-rad(20px)
+		text-align: center
+		line-height: rem(40px)
+		color: white
+		text-decoration: none
+		height: rem(40px)
+		+fz(1rem)
+		+fw(bold)
+		&.prev
+			background: $den-2
+			margin-right: .7rem
+		&.next
+			background: $xanh-la
