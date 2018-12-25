@@ -16,6 +16,8 @@ import { Buyonline4Component } from './pages/buyonline4/buyonline4.component';
 import { MuaOnlineBuoc1Component } from './pages/mua-online-buoc1/mua-online-buoc1.component';
 import { MuaOnlineBuoc2Component } from './pages/mua-online-buoc2/mua-online-buoc2.component';
 import { ProductComponent } from './pages/product/product.component';
+import { GiaiquyetquyenloiBHComponent } from './pages/giaiquyetquyenloi-bh/giaiquyetquyenloi-bh.component';
+import { DieuKhoanBHComponent } from './lib/dieu-khoan-bh/dieu-khoan-bh.component';
 
 
 
@@ -35,6 +37,8 @@ import { ProductComponent } from './pages/product/product.component';
     ThongTinNguoiDuocBaoHiemComponent,
     ThongTinBenMuaBaoHiemComponent,
     ThongTinLienLacComponent,
+    GiaiquyetquyenloiBHComponent,
+    DieuKhoanBHComponent,
     ],
   imports: [
     BrowserModule,
