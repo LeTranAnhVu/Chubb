@@ -2,3 +2,150 @@
 ///////Include//////////
 @import '../../sass/var'
 ////////////////////////
+
+
+.canhcam__header
+    +box-sha(0 1px 6px 0 rgba(32,33,36,0.28))
+    .header__wrap--inner
+        height: 100%
+        display: flex
+        align-items: center
+        .header__btn
+            margin-left: auto
+            .header__trigger
+                cursor: pointer
+                -webkit-tap-highlight-color: transparent
+                transition: transform 400ms
+                -moz-user-select: none
+                -webkit-user-select: none
+                -ms-user-select: none
+                user-select: none
+                width: rem(60px)
+                .line
+                    fill: none
+                    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms
+                    stroke: #ffffff
+                    stroke-width: 5.5
+                    stroke-linecap: round
+                    &--top
+                        stroke-dasharray: 40 160
+                    &--middle
+                        stroke-dasharray: 40 142
+                        transform-origin: 50%
+                        transition: transform 400ms
+                    &--bottom
+                        stroke-dasharray: 40 85
+                        transform-origin: 50%
+                        transition: transform 400ms, stroke-dashoffset 400ms
+                &.header__trigger--open
+                    +transform(rotate(45deg))
+                    .line
+                        &--top
+                            stroke-dashoffset: -64px
+                        &--middle
+                            +transform(rotate(90deg))
+                        &--bottom
+                            stroke-dashoffset: -64px
+        .header__menu
+            .header__nav
+                ul
+                    li
+                        a
+                            text-decoration: none
+                            +fz(rem(16px))
+                            color: #ffffff
+                            display: block
+                            padding-bottom: rem(28px)
+            .header__phone
+                a
+                    text-decoration: none
+                    display: flex
+                    align-items: center
+                .header__phone--logo
+                    margin-right: 1rem
+                .header__phone--number
+                    +fz(rem(12px))
+                    color: #ffffff
+                    .num
+                        display: flex
+                        align-items: center
+                        span
+                            font-size: rem(30px)
+                            +fw(600)
+                            display: block
+                            &:first-child
+                                +fw(700)
+                                margin-right: .3rem
+    @media screen and (max-width: 991.99px)
+        background: $xanh-la
+        height: rem(70px)
+        .header__wrap
+            .header__logo
+                img
+                    max-width: 10rem
+            .header__menu
+                +pos(fixed , rem(70px) null null 0)
+                z-index: 99
+                background: $xanh-la
+                width: 80%
+                height: calc(100vh - 4.375rem)
+                padding: rem(15px)
+                +transform(translateX(-100%))
+                +transition(transform .4s ease-in-out)
+                &.header__menu--active
+                    +transform(translateX(0))
+            .header__overlay
+                +pos(fixed , rem(70px) 0 null null)
+                z-index: 99
+                background: rgba(0,0,0,.4)
+                width: 20%
+                height: calc(100vh - 4.375rem)
+                +transform(translateX(100%))
+                +transition(transform .4s ease-in-out)
+                &.header__overlay--active
+                    +transform(translateX(0))
+    @media screen and (min-width: 992px)
+        .header__wrap
+            .header__wrap--inner
+                +box-sha(inset 0 -1px 0 0 color-rgba(#ffffff , .5))
+            .header__overlay , .header__btn
+                display: none
+            .header__menu
+                display: flex
+                align-items: center
+                margin-left: auto
+                .header__nav
+                    ul
+                        display: flex
+                        align-items: center
+                        li
+                            a
+                                +pad(rem(30px) null)
+                                margin-right: rem(30px)
+                                position: relative
+                                &:before
+                                    content: ''
+                                    display: block
+                                    width: 100%
+                                    height: 3px
+                                    background: $xanh-la
+                                    +pos(abs , null null -1px 0)
+                                    +transform(scale(0))
+                                    +transition(transform .3s ease-in-out)
+                                &:hover , &.active
+                                    &:before
+                                        +transform(scale(1))
+    @media screen and (min-width: 1200px)
+        .header__wrap
+            .header__menu
+                .header__nav
+                    ul
+                        li
+                            a
+                                margin-right: rem(60px)
+    @media screen and (min-width: 1600px)
+        .header__wrap
+            max-width: 1200px
+
+
+
