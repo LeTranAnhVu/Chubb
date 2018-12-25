@@ -1,0 +1,100 @@
+/////////////////////////
+///////Include//////////
+@import '../../sass/var'
+////////////////////////
+.banner
+	min-height: 220px
+	background: $xanh-la
+	display: flex
+	align-items: flex-end
+	text-align: left
+	padding-bottom: rem(60px)
+	@media screen and(min-width: 768px)
+		min-height: 300px
+	.container
+		width: -webkit-fill-available
+	.title
+		color: white
+		p 
+			+fz(1rem)
+		h2 
+			+fz(rem(38px))
+			+fw(400)
+.buyonline5
+	+pad(rem(60px) 0)
+	padding-top: rem(50px)
+	h2 
+		+fz(rem(18px))
+		color: $den-1
+		+fw(600)
+	.block
+		display: flex
+		align-items: center
+		a 
+			margin-left: 0
+			&.inland
+				margin-left: rem(25px)
+		@media screen and(min-width: 768px)
+				img 
+					width: 70px
+		@media screen and(min-width: 992px)
+			a 
+				margin-left: .5rem
+				img 
+					width: auto
+		label
+			position: relative
+			padding-left: calc(1rem + 9px)
+			+mar(0)
+			+fz(rem(13px))
+			cursor: pointer
+			color: #999999
+			&:after
+				content: ''
+				+pos(abs, 0 null null 0 )
+				display: block
+				width: rem(17px)
+				background: transparent
+				border: 2px solid #999999
+				height: rem(17px)
+				transform: translateY(-5%)
+				+bor-rad(50%)
+				+mar(0)
+		input 
+			display: none
+			&:checked
+				~ label
+					&:before
+						content: ''
+						font-family: "Font Awesome 5 Free"
+						font-weight: 600
+						width: rem(9px)
+						background: #999999
+						height: rem(9px)
+						transform: translateX(45%) translateY(35%)
+						+bor-rad(50%)
+						+pos(abs, 0 null null 0 )
+						display: block
+.next-stept
+	display: flex
+	width: 100%
+	justify-content: flex-end
+	margin-top: rem(30px)
+	@media screen and(min-width: 720px)
+		margin-top: rem(30px)
+	.btn
+		width: 12.8rem
+		display: inline-block
+		+bor-rad(20px)
+		text-align: center
+		line-height: rem(40px)
+		color: white
+		text-decoration: none
+		height: rem(40px)
+		+fz(1rem)
+		+fw(bold)
+		&.prev
+			background: $den-2
+			margin-right: .7rem
+		&.next
+			background: $xanh-la
