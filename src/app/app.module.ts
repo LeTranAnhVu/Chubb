@@ -18,6 +18,8 @@ import { ProductComponent } from './pages/product/product.component';
 import { Buyonline4Component } from './pages/buyonline4/buyonline4.component';
 import { Buyonline5Component } from './pages/buyonline5/buyonline5.component';
 import { Buyonline6Component } from './pages/buyonline6/buyonline6.component';
+import { Buyonline3Component } from './pages/buyonline3/buyonline3.component';
+import { TitleComponent } from './lib/title/title.component';
 //////////////////////
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { Buyonline6Component } from './pages/buyonline6/buyonline6.component';
     ProductComponent,
     Buyonline4Component,
     Buyonline5Component,
-    Buyonline6Component],
+    Buyonline6Component,
+    Buyonline3Component,
+    TitleComponent],
   imports: [
     BrowserModule,
     FormsModule,

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from '../app/pages/about/about.component';
 import { Buyonline4Component } from '../app/pages/buyonline4/buyonline4.component';
 import { ProductComponent } from '../app/pages/product/product.component';
+import { Buyonline3Component } from './pages/buyonline3/buyonline3.component';
 import { Buyonline5Component } from './pages/buyonline5/buyonline5.component';
 import { Buyonline6Component } from './pages/buyonline6/buyonline6.component';
 
@@ -14,6 +15,7 @@ import { Buyonline6Component } from './pages/buyonline6/buyonline6.component';
 const routes: Routes = [
     {path: 'about' , component: AboutComponent},
     {path: 'product' , component: ProductComponent},
+    {path: 'buyonline3' , component: Buyonline3Component},
     {path: 'buyonline4' , component: Buyonline4Component},{path: 'buyonline5' , component: Buyonline5Component},{path: 'buyonline6' , component: Buyonline6Component}
 ];
 @NgModule({
