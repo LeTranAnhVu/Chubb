@@ -1,0 +1,100 @@
+/////////////////////////
+///////Include//////////
+@import '../../sass/var'
+////////////////////////
+
+.online3 
+	+pad(rem(50px) 0)
+	background: #f5f5f5
+	table
+		width: 100%
+		tr 
+			&:nth-child(3),&:nth-child(5)
+				background: #ebebeb
+				border-top: 1px solid #cccccc
+				border-bottom: 1px solid #cccccc
+			&:last-child
+				border-bottom: 2px solid #999
+		th 
+			width: 82%
+			text-align: left
+			+pad(rem(23px))
+			border-right: 2px solid #999
+			&.bg
+				background: #ebebeb
+				border-top: 1px solid #cccccc
+				border-bottom: 1px solid #cccccc
+			&.last
+				border-bottom: 2px solid #999
+			p 
+				position: relative
+				color: $den-1
+				+fz(1rem)
+				+fw(400)
+				&:after
+					content: ''
+					+pos(abs,4px null null rem(-12.5px))
+					display: block
+					border-radius: 50%
+					width: 5px
+					background: #999
+					height: 5px
+			&.title
+				border-bottom: 2px solid #999
+				+fz(rem(18px))
+				color: $den-1
+				+pad(rem(13px))
+				padding-left: 0
+				+fw(600)
+		td 
+			+pad(rem(22px) rem(25px))
+			&.bor-bot
+				border-bottom: 2px solid #999
+				+fz(rem(18px))
+				color: $den-1
+				+fw(600)
+			span 
+				display: none
+				@media screen and(min-width: 1200px)
+					+mar(0 rem(17px))
+					display: inline-block
+			ul 
+				display: inline-block
+				margin-bottom: .5rem
+				@media screen and(min-width: 1200px)
+					margin-bottom: 0
+
+				li 
+					label
+						position: relative
+						padding-left: calc(1rem + 12px)
+						+mar(0)
+						+fz(rem(14px))
+						cursor: pointer
+						color: #666
+						&:after
+							content: ''
+							+pos(abs, 50% null null 0 )
+							display: block
+							width: rem(20px)
+							background: transparent
+							border: 2px solid $xanh-la
+							height: rem(20px)
+							transform: translateY(-50%)
+							+bor-rad(50%)
+							+mar(0)
+					input 
+						display: none
+						&:checked
+							~ label
+								&:before
+									content: ''
+									font-family: "Font Awesome 5 Free"
+									font-weight: 600
+									width: rem(10px)
+									background: $xanh-la
+									height: rem(10px)
+									transform: translateX(53%) translateY(20%)
+									+bor-rad(50%)
+									+pos(abs, 0 null null 0 )
+									display: block

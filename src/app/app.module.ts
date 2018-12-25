@@ -15,6 +15,7 @@ import { MuaOnlineBuoc4Component } from './pages/mua-online-buoc4/mua-online-buo
 import { MuaOnlineBuoc5Component } from './pages/mua-online-buoc5/mua-online-buoc5.component';
 import { MuaOnlineBuoc6HoanthanhComponent } from './pages/mua-online-buoc6-hoanthanh/mua-online-buoc6-hoanthanh.component';
 import { ProductComponent } from './pages/product/product.component';
+import { MuaOnlineBuoc3Component } from './pages/mua-online-buoc3/mua-online-buoc3.component';
 
 
 
@@ -32,7 +33,8 @@ import { ProductComponent } from './pages/product/product.component';
     MuaOnlineBuoc3NhapOTPComponent,
     MuaOnlineBuoc6HoanthanhComponent,
     MuaOnlineBuoc5Component,
-    MuaOnlineBuoc4Component],
+    MuaOnlineBuoc4Component,
+    MuaOnlineBuoc3Component],
   imports: [
     BrowserModule,
     FormsModule,
