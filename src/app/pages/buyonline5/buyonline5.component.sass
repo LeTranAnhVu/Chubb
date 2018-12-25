@@ -18,11 +18,16 @@
 		p 
 			+fz(1rem)
 		h2 
-			+fz(rem(38px))
+			+fz(rem(32px))
 			+fw(400)
+		@media screen and(min-width: 768px)
+			h2 
+				+fz(rem(38px))
 .buyonline5
-	+pad(rem(60px) 0)
-	padding-top: rem(50px)
+	+pad(3rem 0 )
+	@media screen and(min-width: 768px)
+		+pad(rem(60px) 0)
+		padding-top: rem(50px)
 	h2 
 		+fz(rem(18px))
 		color: $den-1
