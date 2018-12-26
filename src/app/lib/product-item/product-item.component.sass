@@ -3,71 +3,104 @@
 ///////Include//////////
 @import '../../sass/var'
 ////////////////////////
-
-figure
-  margin-bottom: 0
-  background: #ffffff
-  // height: 100%
-  height: rem(460px)
-  display: flex
-  flex-direction: column
-  .boxzoom
-      img
-          width: 100%
-  figcaption
-      +pad(rem(28px) rem(20px) rem(20px) rem(20px))
-      display: flex
-      flex-direction: column
-      height: 100%
-      .content
-          margin-bottom: auto
-      h3
-          +fz(rem(24px))
-          color: #333333
-          +fw(600)
-          margin-bottom: rem(5px)
-      h5
-          +fz(rem(18px))
-          color: #333333
-          margin-bottom: rem(16px)
-      p
-          +fz(1rem)
-          color: #333333
-          overflow: hidden
-          text-overflow: ellipsis
-          display: -webkit-box
-          -webkit-box-orient: vertical
-          -webkit-line-clamp: 4
-          max-height: 6rem
-      .group-btn
-          display: flex
-          justify-content: space-between
-          align-items: center
-          margin-top: 1rem
-          a
-              display: inline-block
-              +fz(1rem)
-          .buy-btn
-              a
-                  +pad(rem(12px) rem(40px))
-                  color: #ffffff
-                  // background: #333333
-          .more-btn
-              button
-                  text-decoration: underline
-                  color: #333333
-                  text-underline-position: under
-                  background: none
-                  border: none
-                  +pad(0)
-                  cursor: pointer
-                  &:after
-                      content: '\f140'
-                      font-family: 'Material Design Icons'
-                      +fz(rem(18px))
-                      +lh(rem(18px))
-                      color: #333333
-                      display: inline-block
-                      margin-left: rem(8px)
-                  &:focus
-                      outline: none
+::ng-deep .product-item
+    .item
+        margin-bottom: 1.3rem
+        figure
+            margin-bottom: 0
+            background: #ffffff
+            // height: 100%
+            display: flex
+            flex-direction: column
+            @media screen and (min-width: 992px)
+                height: rem(460px)
+            .boxzoom
+                img
+                    width: 100%
+            figcaption
+                +pad(rem(28px) rem(20px) rem(20px) rem(20px))
+                display: flex
+                flex-direction: column
+                height: 100%
+                .content
+                    margin-bottom: auto
+                h3
+                    +fz(rem(24px))
+                    color: #333333
+                    +fw(600)
+                    margin-bottom: rem(5px)
+                h5
+                    +fz(rem(18px))
+                    color: #333333
+                    margin-bottom: rem(16px)
+                p
+                    +fz(1rem)
+                    color: #333333
+                    overflow: hidden
+                    text-overflow: ellipsis
+                    display: -webkit-box
+                    -webkit-box-orient: vertical
+                    -webkit-line-clamp: 4
+                    max-height: 6rem
+                .group-btn
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    margin-top: 1rem
+                    a
+                        display: inline-block
+                        +fz(1rem)
+                    .buy-btn
+                        a
+                            +pad(rem(12px) rem(40px))
+                            color: #ffffff
+                    .more-btn
+                        button
+                            text-decoration: underline
+                            color: #333333
+                            text-underline-position: under
+                            background: none
+                            border: none
+                            +pad(0)
+                            cursor: pointer
+                            &:after
+                                content: '\f140'
+                                font-family: 'Material Design Icons'
+                                +fz(rem(18px))
+                                +lh(rem(18px))
+                                color: #333333
+                                display: inline-block
+                                margin-left: rem(8px)
+                            &:focus
+                                outline: none
+        &:first-child
+            figure
+                +box-sha(inset 0 -4px 0 0 $xanh-la)
+                figcaption
+                    h5
+                        color: $xanh-la
+                    .group-btn
+                        .buy-btn
+                            a
+                                background: $xanh-la
+        &:nth-child(2)
+            figure
+                +box-sha(inset 0 -4px 0 0 $cam)
+                figcaption
+                    h5
+                        color: $cam
+                    .group-btn
+                        .buy-btn
+                            a
+                                background: $cam
+        &:last-child
+            margin-bottom: 0
+            figure
+                +box-sha(inset 0 -4px 0 0 $tim)
+                figcaption
+                    h5
+                        color: $tim
+                    .group-btn
+                        .buy-btn
+                            a
+                                background: $tim

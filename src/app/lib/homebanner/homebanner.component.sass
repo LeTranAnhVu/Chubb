@@ -1,0 +1,78 @@
+/////////////////////////
+///////Include//////////
+@import '../../sass/var'
+////////////////////////
+.canhcam-home-banner
+    .carousel , .carousel-inner
+        &:focus
+            outline: none
+    .carousel-inner
+        .carousel-item
+            display: block
+            opacity: 0
+            visibility: hidden
+            +transition(all .3s ease-in-out)
+            &.active
+                opacity: 1
+                visibility: visible
+            .container
+                .title-wrap
+                    padding-left: rem(25px)
+                    +box-sha(-6px 0 0 0 $xanh-la)
+            img
+                width: 100%
+                min-height: rem(400px)
+                object-fit: cover
+            .carousel-caption
+                text-align: left
+                // position: relative
+                @media screen and (min-width: 992px)
+                    bottom: auto
+                    top: 55%
+                    +transform(translateY(-50%))
+                h3
+                    margin-bottom: 1rem
+                    @media screen and (min-width: 992px)
+                        +fz(rem(36px))
+                p
+                    +fz(rem(16px))
+                    margin-bottom: rem(20px)
+                a
+                    +fz(1rem)
+                    color: #ffffff
+                    text-decoration: none
+                    display: inline-block
+                    position: relative
+                    &:after
+                        content: '\f142'
+                        font-family: 'Material Design Icons'
+                        +fz(rem(18px))
+                        // +lh(rem(18px))
+                        +pos(abs , 50% rem(-25px) null null)
+                        +transform(translateY(-50%))
+                        display: inline-block
+                        // margin-left: rem(9px)
+    .carousel-control-prev
+        cursor: pointer
+        .carousel-control-prev-icon
+            display: none
+        &:before
+            content: '\e875'
+            font-family: 'Linearicons-Free'
+            display: block
+            +fz(2rem)
+            +pos(abs , 50% null null 50%)
+            +transform(translate(-50%,-50%))
+            color: #ffffff
+    .carousel-control-next
+        cursor: pointer
+        .carousel-control-next-icon
+            display: none
+        &:before
+            content: '\e876'
+            font-family: 'Linearicons-Free'
+            display: block
+            +fz(2rem)
+            +pos(abs , 50% 50% null null)
+            +transform(translate(-50%,-50%))
+            color: #ffffff

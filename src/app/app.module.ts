@@ -18,6 +18,11 @@ import { ProductComponent } from './pages/product/product.component';
 import { Buyonline4Component } from './pages/buyonline4/buyonline4.component';
 import { ProductItemComponent } from './lib/product-item/product-item.component';
 import { ProductDetailComponent } from './lib/product-detail/product-detail.component';
+import { HomeComponent } from './pages/home/home.component';
+import { HomebannerComponent } from './lib/homebanner/homebanner.component';
+import { HomeabvantagesComponent } from './lib/homeabvantages/homeabvantages.component';
+import { HomesupportComponent } from './lib/homesupport/homesupport.component';
+import { HomeproductComponent } from './lib/homeproduct/homeproduct.component';
 //////////////////////
 @NgModule({
   declarations: [
@@ -28,7 +33,12 @@ import { ProductDetailComponent } from './lib/product-detail/product-detail.comp
     ProductComponent,
     Buyonline4Component,
     ProductItemComponent,
-    ProductDetailComponent],
+    ProductDetailComponent,
+    HomeComponent,
+    HomebannerComponent,
+    HomeabvantagesComponent,
+    HomesupportComponent,
+    HomeproductComponent],
   imports: [
     BrowserModule,
     FormsModule,

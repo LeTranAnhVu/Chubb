@@ -4,24 +4,33 @@
 @import '../../sass/var'
 ////////////////////////
 .product-detail-wrap
-  background: #ffffff
-  +pad(rem(20px) rem(20px) rem(40px) rem(20px))
-  +box-sha(inset 0 -4px 0 0 $xanh-la)
-  .block-detail
-      h5
-          +fz(rem(18px))
-          +fw(700)
-          color: #333333
-          margin-bottom: rem(15px)
-      p
-          margin-bottom: rem(17px)
-      ul
-          li
-              &:before
-                  content: '\f111'
-                  font-family: 'Font Awesome 5 Free'
-                  +fw(600)
-                  +fz(5px)
-                  color: #333333
-                  display: inline-block
-                  margin-right: rem(7px)
+    background: #ffffff
+    +pad(rem(20px) rem(20px) rem(40px) rem(20px))
+    +box-sha(inset 0 -4px 0 0 $xanh-la)
+    .block-detail
+        h5
+            +fz(rem(18px))
+            +fw(700)
+            color: #333333
+            margin-bottom: rem(15px)
+        p
+            margin-bottom: rem(17px)
+        ul
+            li
+                &:before
+                    content: '\f111'
+                    font-family: 'Font Awesome 5 Free'
+                    +fw(600)
+                    +fz(5px)
+                    color: #333333
+                    display: inline-block
+                    margin-right: rem(7px)
+    @media screen and (max-width: 991.98px)
+        display: none
+        +transform(scale(0))
+        +transition(transform .3s ease-in-out)
+        &.special
+            display: block
+            +pos(fixed , 50% null null 50%)
+            +transform(scale(1) translate(-50%,-50%))
+            width: 90%

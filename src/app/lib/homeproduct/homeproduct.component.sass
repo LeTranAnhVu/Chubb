@@ -1,0 +1,94 @@
+/////////////////////////
+///////Include//////////
+@import '../../sass/var'
+////////////////////////
+.canhcam-home-product
+    +pad(rem(30px) null)
+    background: #f5f5f5
+    .title
+        padding-bottom: rem(23px)
+        +box-sha(inset 0 -1px 0 0 #e5e5e5)
+        h2
+            margin-bottom: .4rem
+        h3
+            +fz(rem(24px))
+            color: #656565
+        .seemore
+            margin-top: rem(20px)
+            a
+                width: rem(150px)
+                height: rem(40px)
+                +lh(rem(40px))
+                text-align: center
+                color: #333333
+                +fz(1rem)
+                position: relative
+                +box-sha(inset 0 0 0 1px #333333)
+                +flex-center()
+                text-decoration: none
+                &:after
+                    content: '\f142'
+                    font-family: 'Material Design Icons'
+                    +fz(rem(18px))
+                    +lh(rem(18px))
+                    margin-left: rem(6px)
+                    display: inline-block
+    h4
+        color: #333333
+        +fz(rem(18px))
+        margin-bottom: rem(18px)
+        padding-top: rem(23px)
+    .product-detail
+        padding-top: rem(15px)
+        .product-detail-wrap
+            background: #ffffff
+            +pad(rem(20px) rem(20px) rem(40px) rem(20px))
+            +box-sha(inset 0 -4px 0 0 $xanh-la)
+            .block-detail
+                h5
+                    +fz(rem(18px))
+                    +fw(700)
+                    color: #333333
+                    margin-bottom: rem(15px)
+                p
+                    margin-bottom: rem(17px)
+                ul
+                    li
+                        &:before
+                            content: '\f111'
+                            font-family: 'Font Awesome 5 Free'
+                            +fw(600)
+                            +fz(5px)
+                            color: #333333
+                            display: inline-block
+                            margin-right: rem(7px)
+    @media screen and (min-width: 578px)
+        +pad(rem(50px) null rem(60px) null)
+        .title
+            .seemore
+                a
+                    +transition(color .3s ease-in-out)
+                    +transition(height 0.3s cubic-bezier(0.815, 1.650, 0.400, 0.680))
+                    &:after
+                        // position: relative
+                        // z-index: 1
+                        +transition(color .3s ease-in-out)
+                    &:hover
+                        color: #ffffff
+                        background: #333333
+                        &:before
+                            height: 100%
+                        &:after
+                            color: #ffffff
+        .product-item
+            +mar(null 'calc( -14px / 2 )')
+            .item
+                +pad(null 'calc( 14px / 2 )')
+    @media screen and (min-width: 992px)
+        .product-item
+            .item
+                margin-bottom: 0
+                figure
+                    +transition(transform .3s ease-in-out)
+                    &:hover
+                        +box-sha(0 2px 12px 0 rgba(0,0,0,0.35))

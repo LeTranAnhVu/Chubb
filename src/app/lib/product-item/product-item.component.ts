@@ -13,7 +13,9 @@ export class ProductItemComponent implements OnInit {
     this.whichDetail.emit(this.product.detail);
     console.log(this.product.detail);
     console.log('send detail success');
+    // let productWrap = document.getElementsByClassName('product-detail-wrap');
   }
+  
   constructor() { }
 
   ngOnInit() {

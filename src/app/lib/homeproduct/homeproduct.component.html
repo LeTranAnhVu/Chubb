@@ -1,0 +1,32 @@
+<section class="canhcam-home-product">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="title">
+					<h2 class="home-title">Sản phẩm Bảo hiểm hỗ trợ điều trị ung thư – C Care</h2>
+					<h3>Chi trả Số tiền Bảo hiểm lên đến 500 triệu đồng</h3>
+					<div class="seemore">
+						<a href="#">Tìm hiểu thêm</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<h4>Vui lòng lựa chọn giải pháp phù hợp với bạn:</h4>
+			</div>
+		</div>
+		<div class="row product-item">
+			<!-- product component -->
+			<div class="col-md-6 col-lg-4 item" *ngFor="let product of products">
+				<app-product-item [product]="product" (whichDetail)="onDetail($event)"></app-product-item>
+			</div>
+			<!-- end product component -->
+		</div>
+		<div class="row product-detail">
+			<div class="col-12">
+				<app-product-detail [detail]="detail" [active]="isActive"></app-product-detail>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,59 @@
+/////////////////////////
+///////Include//////////
+@import '../../sass/var'
+////////////////////////
+.canhcam-home-abvantages
+    +pad(rem(30px) null)
+    h2
+        margin-bottom: rem(22px)
+    .item
+        margin-bottom: rem(20px)
+        figure
+            margin-bottom: 0
+            +pad(rem(20px))
+            box-shadow: inset 0 0 0 1px #ebebeb , inset 0 -4px 0 0 $tim
+            .boximg
+                margin-bottom: rem(26px)
+            figcaption
+                h3
+                    +fz(rem(18px))
+                    color: #333333
+                    +fw(700)
+                    margin-bottom: rem(16px)
+        &:last-child
+            margin-bottom: 0
+    @media screen and (min-width: 578px)
+        +pad(rem(50px) null rem(60px) null)
+        .item
+            figure
+                height: 100%
+    @media screen and (min-width: 992px)
+        .item
+            margin-bottom: 0
+            figure
+                position: relative
+                .boximg
+                    img
+                        +transition(color .3s ease-in-out)
+                figcaption
+                    h3 , p
+                        +transition(color .3s ease-in-out)
+                &:before
+                    content: ''
+                    display: block
+                    width: 100%
+                    height: 0
+                    background: $tim
+                    +transition(height 0.3s cubic-bezier(0.815, 1.650, 0.400, 0.680))
+                    +pos(abs , null null 0 0)
+                    z-index: -1
+                &:hover
+                    .boximg
+                        img
+                            filter: brightness(0) invert(1)
+                    figcaption
+                        h3 , p
+                            color: #ffffff
+                    &:before
+                        height: 100%
+
