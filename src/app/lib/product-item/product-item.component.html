@@ -1,0 +1,20 @@
+<figure>
+  <div class="boxzoom">
+    <img [src]="product.img" alt="">
+  </div>
+  <figcaption>
+    <div class="content">
+      <h3>{{product.title}}</h3>
+      <h5 class="price">{{product.price}}</h5>
+      <p>{{product.description}}</p>
+    </div>
+    <div class="group-btn">
+      <div class="buy-btn">
+        <a href="#">Mua online</a>
+      </div>
+      <div class="more-btn">
+        <button type="button" data-tab="#tab-1" (click) = "seeMoreHandler()">Xem thêm</button>
+      </div>
+    </div>
+  </figcaption>
+</figure>
