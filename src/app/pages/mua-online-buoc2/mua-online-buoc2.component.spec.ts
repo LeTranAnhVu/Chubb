@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TitleComponent } from './title.component';
+import { MuaOnlineBuoc2Component } from './mua-online-buoc2.component';
 
-describe('TitleComponent', () => {
-  let component: TitleComponent;
-  let fixture: ComponentFixture<TitleComponent>;
+describe('MuaOnlineBuoc2Component', () => {
+  let component: MuaOnlineBuoc2Component;
+  let fixture: ComponentFixture<MuaOnlineBuoc2Component>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TitleComponent ]
+      declarations: [ MuaOnlineBuoc2Component ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TitleComponent);
+    fixture = TestBed.createComponent(MuaOnlineBuoc2Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
