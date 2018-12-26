@@ -150,94 +150,15 @@
       </div>
     </div>
     <div class="row product-item">
-      <div class="col-md-6 col-lg-4 item">
-        <figure>
-          <div class="boxzoom">
-            <img src="../assets//img//home/home_product_1.jpg" alt="">
-          </div>
-          <figcaption>
-            <div class="content">
-              <h3>C Care – Lựa chọn Cơ bản</h3>
-              <h5 class="price">200 triệu đồng</h5>
-              <p>Với mức phí chỉ từ 450 đồng/ngày, bạn sẽ được bảo vệ lên đến 5 năm trước những hiểm họa rình rập bởi
-                bệnh ung thư.</p>
-            </div>
-            <div class="group-btn">
-              <div class="buy-btn">
-                <a href="#">Mua online</a>
-              </div>
-              <div class="more-btn">
-                <button type="button" data-tab="#tab-1">Xem thêm</button>
-              </div>
-            </div>
-          </figcaption>
-        </figure>
+      <!-- product component -->
+      <div class="col-md-6 col-lg-4 item" *ngFor="let product of products">
+        <app-product-item [product] = "product" (whichDetail) = "onDetail($event)"></app-product-item>
       </div>
-      <div class="col-md-6 col-lg-4 item">
-        <figure>
-          <div class="boxzoom">
-            <img src="../assets//img//home/home_product_2.jpg" alt="">
-          </div>
-          <figcaption>
-            <div class="content">
-              <h3>C Care – Lựa chọn Nâng cao</h3>
-              <h5 class="price">300 triệu đồng</h5>
-              <p>Hỗ trợ điều trị bệnh ung thư cho từng giai đoạn, mang lại sự an tâm về tinh thần và sự đảm bảo về tài
-                chính cho bạn và gia đình..</p>
-            </div>
-            <div class="group-btn">
-              <div class="buy-btn">
-                <a href="#">Mua online</a>
-              </div>
-              <div class="more-btn">
-                <button type="button" data-tab="#tab-2">Xem thêm</button>
-              </div>
-            </div>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-6 col-lg-4 item">
-        <figure>
-          <div class="boxzoom">
-            <img src="../assets//img//home/home_product_3.jpg" alt="">
-          </div>
-          <figcaption>
-            <div class="content">
-              <h3>C Care – Lựa chọn Ưu việt</h3>
-              <h5 class="price">500 triệu đồng</h5>
-              <p>Bạn có thể mua gì với 1.000 đồng? Với “C Care – Lựa chọn Ưu việt”, chỉ từ 1.000 đồng/ngày, bạn sẽ sở
-                hữu một hợp đồng bảo hiểm sức khỏe có mệnh giá cao và mức phí vô cùng hợp lý.
-              </p>
-            </div>
-            <div class="group-btn">
-              <div class="buy-btn">
-                <a href="#">Mua online</a>
-              </div>
-              <div class="more-btn">
-                <button type="button" data-tab="#tab-3">Xem thêm</button>
-              </div>
-            </div>
-          </figcaption>
-        </figure>
-      </div>
+      <!-- end product component -->
     </div>
     <div class="row product-detail">
       <div class="col-12">
-        <div class="product-detail-wrap">
-          <div class="block-detail">
-            <h5>Thông tin về gói sản phẩm:</h5>
-            <p>Với mức phí chỉ từ 450 đồng/ngày, bạn sẽ được bảo vệ lên đến 5 năm trước những hiểm họa rình rập bởi
-              bệnh
-              ung thư.</p>
-            <ul>
-              <li>Tuổi tham gia bảo hiểm từ 01 tháng tuổi đến 60 tuổi.</li>
-              <li>Được chi trả lên đến 200 triệu đồng trước rủi ro bệnh ung thư.</li>
-              <li>Thẩm định đơn giản, không cần khám sức khỏe</li>
-              <li>Có thể đóng phí bảo hiểm một lần khi tham gia bảo hiểm hoặc đóng theo kỳ trong thời hạn Hợp đồng Bảo
-                hiểm.</li>
-            </ul>
-          </div>
-        </div>
+        <app-product-detail [detail] = "detail"></app-product-detail>
       </div>
     </div>
   </div>

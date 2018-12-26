@@ -1,0 +1,27 @@
+
+/////////////////////////
+///////Include//////////
+@import '../../sass/var'
+////////////////////////
+.product-detail-wrap
+  background: #ffffff
+  +pad(rem(20px) rem(20px) rem(40px) rem(20px))
+  +box-sha(inset 0 -4px 0 0 $xanh-la)
+  .block-detail
+      h5
+          +fz(rem(18px))
+          +fw(700)
+          color: #333333
+          margin-bottom: rem(15px)
+      p
+          margin-bottom: rem(17px)
+      ul
+          li
+              &:before
+                  content: '\f111'
+                  font-family: 'Font Awesome 5 Free'
+                  +fw(600)
+                  +fz(5px)
+                  color: #333333
+                  display: inline-block
+                  margin-right: rem(7px)
