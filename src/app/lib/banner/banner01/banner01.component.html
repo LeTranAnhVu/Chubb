@@ -1,0 +1,11 @@
+<div class="container-fluid banner-container">
+  <img class="img-fluid img-banner" [src]="content.img" alt="about banner">
+  <div class="page-title container">
+    <h3 *ngFor="let title of content.titles">
+      {{title}}
+    </h3>
+    <h5 *ngIf='content.subTitle'>
+      {{content.subTitle}}
+    </h5>
+  </div>
+</div>

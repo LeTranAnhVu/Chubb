@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { BannerContent } from '../../interfaces/banner-content';
 @Component({
   selector: 'app-giaiquyetquyenloi-bh',
   templateUrl: './giaiquyetquyenloi-bh.component.html',
@@ -8,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class GiaiquyetquyenloiBHComponent implements OnInit {
 
   constructor() { }
-  banner = '../../../assets/img/thutuc/thutuc_banner.jpg';
+  bannerContent: BannerContent = {
+    img: '../../../assets/img/thutuc/thutuc_banner.jpg',
+    titles: ['Thủ tục Thanh toán Quyền Lợi', 'Bảo hiểm Nhân Thọ']
+  };
   ngOnInit() {
   }
 

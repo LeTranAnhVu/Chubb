@@ -18,6 +18,7 @@ import { MuaOnlineBuoc2Component } from './pages/mua-online-buoc2/mua-online-buo
 import { ProductComponent } from './pages/product/product.component';
 import { GiaiquyetquyenloiBHComponent } from './pages/giaiquyetquyenloi-bh/giaiquyetquyenloi-bh.component';
 import { DieuKhoanBHComponent } from './lib/dieu-khoan-bh/dieu-khoan-bh.component';
+import { Banner01Component } from './lib/banner/banner01/banner01.component';
 
 
 
@@ -39,6 +40,7 @@ import { DieuKhoanBHComponent } from './lib/dieu-khoan-bh/dieu-khoan-bh.componen
     ThongTinLienLacComponent,
     GiaiquyetquyenloiBHComponent,
     DieuKhoanBHComponent,
+    Banner01Component,
     ],
   imports: [
     BrowserModule,

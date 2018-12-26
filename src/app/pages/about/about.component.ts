@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { BannerContent } from '../../interfaces/banner-content';
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'ngbd-accordion-basic',
@@ -9,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
 
   constructor() { }
-  banner = '../../../assets/img/about/about_banner.png';
+  bannerContent: BannerContent = {
+    img: '../../../assets/img/about/about_banner.png',
+    titles: ['Giới Thiệu Về Chubb']
+  };
   ngOnInit() {
   }
-
 }
