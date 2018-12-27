@@ -20,23 +20,24 @@ import { MuaOnlineBuoc6HoanthanhComponent } from './pages/mua-online-buoc6-hoant
 
 const routes: Routes = [
 
-    {path: 'home' , component: HomeComponent},
-    {path: 'about' , component: AboutComponent},
-    {path: 'product' , component: ProductComponent},
-
-    {path: 'mua-online-buoc3' , component: MuaOnlineBuoc3Component},
-    {path: 'mua-online-buoc3-nhap-otp' , component: MuaOnlineBuoc3NhapOTPComponent},
-    {path: 'mua-online-buoc4' , component: MuaOnlineBuoc4Component},
-    {path: 'mua-online-buoc5' , component: MuaOnlineBuoc5Component},
-    {path: 'mua-online-buoc6-hoanthanh' , component: MuaOnlineBuoc6HoanthanhComponent},
-
-    {path: 'mua-online-buoc1' , component: MuaOnlineBuoc1Component},
-    {path: 'mua-online-buoc2' , component: MuaOnlineBuoc2Component},
-    {path: 'giai-quyet-quyen-loi-BH' , component: GiaiquyetquyenloiBHComponent},
-
+	{ path: '', component: HomeComponent },
+	{ path: 'about', component: AboutComponent },
+	{ path: 'product', component: ProductComponent },
+	
+	{ path: 'mua-online-buoc3', component: MuaOnlineBuoc3Component },
+	{ path: 'mua-online-buoc3-nhap-otp', component: MuaOnlineBuoc3NhapOTPComponent },
+	{ path: 'mua-online-buoc4', component: MuaOnlineBuoc4Component },
+	{ path: 'mua-online-buoc5', component: MuaOnlineBuoc5Component },
+	{ path: 'mua-online-buoc6-hoanthanh', component: MuaOnlineBuoc6HoanthanhComponent },
+	
+	{ path: 'mua-online-buoc1', component: MuaOnlineBuoc1Component },
+	{ path: 'mua-online-buoc2', component: MuaOnlineBuoc2Component },
+	{ path: 'giai-quyet-quyen-loi-BH', component: GiaiquyetquyenloiBHComponent },
+	{ path: '**', redirectTo: '', pathMatch: 'full' },
+	
 ];
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+	imports: [RouterModule.forRoot(routes)],
+	exports: [RouterModule]
 })
 export class AppRoutingModule { }
