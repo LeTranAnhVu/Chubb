@@ -104,3 +104,19 @@
                         .buy-btn
                             a
                                 background: $tim
+    @media screen and (min-width: 578px)
+        +mar(null 'calc( -14px / 2 )')
+        .item
+            +pad(null 'calc( 14px / 2 )')
+    @media screen and (min-width: 578px) and (max-width: 991.99px)
+        .item
+            figure
+                height: 100%
+    @media screen and (min-width: 992px)
+        .product-item
+            .item
+                margin-bottom: 0
+                figure
+                    +transition(transform .3s ease-in-out)
+                    &:hover
+                        +box-sha(0 2px 12px 0 rgba(0,0,0,0.35))

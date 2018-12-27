@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 interface IProduct {
   img: string;
+  theme: string;
   title: string;
   price: string;
   description: string;
@@ -16,6 +17,7 @@ interface IProductDetail {
 let productsMockup: IProduct[] = [
   {
     img: '../../assets/img/home/home_product_1.jpg',
+    theme: 'green',
     title: 'C Care – Lựa chọn Cơ bản',
     price: '200 triệu đồng',
     description: 'Với mức phí chỉ từ 450 đồng/ngày, bạn sẽ được bảo vệ lên đến 5 năm trước những hiểm họa rình rập bởi bệnh ung thư.',
@@ -32,6 +34,7 @@ let productsMockup: IProduct[] = [
   },
   {
     img: '../../assets/img/home/home_product_2.jpg',
+    theme: 'orange',
     title: 'C Care – Lựa chọn Nâng cao',
     price: '300 triệu đồng',
     description: 'Hỗ trợ điều trị bệnh ung thư cho từng giai đoạn, mang lại sự an tâm về tinh thần và sự đảm bảo về tài chính cho bạn và gia đình..',
@@ -48,6 +51,7 @@ let productsMockup: IProduct[] = [
   },
   {
     img: '../../assets/img/home/home_product_3.jpg',
+    theme: 'purple',
     title: 'C Care – Lựa chọn Ưu việt',
     price: '500 triệu đồng',
     description: 'Bạn có thể mua gì với 1.000 đồng? Với “C Care – Lựa chọn Ưu việt”, chỉ từ 1.000 đồng/ngày, bạn sẽ sở hữu một hợp đồng bảo hiểm sức khỏe có mệnh giá cao và mức phí vô cùng hợp lý.',
@@ -68,7 +72,9 @@ let productsMockup: IProduct[] = [
   templateUrl: './homeproduct.component.html',
   styleUrls: ['./homeproduct.component.sass']
 })
+
 export class HomeproductComponent  {
+  @Input() active;
   isActive = false;
   products: IProduct[] = productsMockup;
   detail = this.products[0].detail;
