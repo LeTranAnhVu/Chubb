@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from '../app/pages/about/about.component';
 import { ProductComponent } from '../app/pages/product/product.component';
 import { GiaiquyetquyenloiBHComponent } from './pages/giaiquyetquyenloi-bh/giaiquyetquyenloi-bh.component';
+import { HomeComponent } from './pages/home/home.component';
 import { MuaOnlineBuoc1Component } from './pages/mua-online-buoc1/mua-online-buoc1.component';
 import { MuaOnlineBuoc2Component } from './pages/mua-online-buoc2/mua-online-buoc2.component';
 import { MuaOnlineBuoc3NhapOTPComponent } from './pages/mua-online-buoc3-nhap-otp/mua-online-buoc3-nhap-otp.component';
@@ -18,6 +19,8 @@ import { MuaOnlineBuoc6HoanthanhComponent } from './pages/mua-online-buoc6-hoant
 
 
 const routes: Routes = [
+
+    {path: 'home' , component: HomeComponent},
     {path: 'about' , component: AboutComponent},
     {path: 'product' , component: ProductComponent},
 
