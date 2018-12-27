@@ -5,53 +5,81 @@
 
 
 .about
-  .content-container
-    padding-bottom: rem(60px)
-    .outer-box
-      padding: rem(30px)
-      background: url('../../../assets/img/about/about_content_bg.png') no-repeat center center
-      background-size: cover
-    .content-box-01
-      color: #323232
-      padding: rem(25px) rem(10px)
-    .content-box-02
-      color: #ffffff
-      background: #01c1d6
-      padding: rem(25px) rem(10px)
+	.content-container
+		padding-bottom: rem(60px)
+	.outer-box
+		// padding: rem(30px)
+		background: url('../../../assets/img/about/about_content_bg.png') no-repeat center center
+		background-size: cover
+	.content-box-01
+		color: #323232
+		padding: rem(25px) rem(10px)
+	.content-box-02
+		color: #ffffff
+		background: #01c1d6
+		padding: 2rem 1rem
 
 
-    .content-box
-      .title
-        margin-bottom: rem(28px)
-        font-size: rem(25px)
-        font-weight: normal
-      p
-        margin-bottom: rem(20px)
-        font-weight: normal
-        font-size: rem(16px)
-        &:last-child
-          margin-bottom: 0
-        a
-          color: inherit
+	.content-box
+		.title
+			margin-bottom: rem(28px)
+			font-size: rem(25px)
+			font-weight: normal
+		p
+			margin-bottom: rem(14px)
+			font-weight: normal
+			font-size: rem(14px)
+			&:last-child
+				margin-bottom: 0
+		a
+			color: inherit
 
 
 
-    @media screen and (min-width: 992px)
-      .content-box-01
-        margin-left: rem(220px)
-        padding: rem(45px) 0
-
-      .outer-box
-        padding: rem(140px) 0 0 0
-      .content-box-02
-        margin: 0 0 0 rem(220px)
-        padding: rem(48px)
-      .content-box
-        .title
-          font-size: rem(35px)
-        p
-          margin-bottom: rem(30px)
-
+	@media screen and (min-width: 992px)
+		.content-box-01
+			margin-left: rem(220px)
+			padding: rem(45px) 0
+		.content-box
+			.title
+				font-size: rem(30px)
+				margin-bottom: .9rem
+			p
+				margin-bottom: .9rem
+				+fz(rem(16px))
+				+lh(rem(20px))
+				+fw(400)
+		.outer-box
+			position: relative
+			height: 560px
+			width: 100%
+			.content-box-02
+				+pos(abs,null 0 0 null)
+				width: 80%
+				height: 75%
+				+pad(rem(40px) rem(35px))
+	@media screen and (min-width: 1200px)
+		.content-box-01
+			margin-left: rem(220px)
+			padding: rem(45px) 0
+		.content-box
+			.title
+				font-size: rem(30px)
+				margin-bottom: rem(20px)
+			p
+				margin-bottom: rem(20px)
+				+fz(rem(16px))
+				+lh(rem(20px))
+				+fw(400)
+		.outer-box
+			position: relative
+			height: 560px
+			width: 100%
+			.content-box-02
+				+pos(abs,null 0 0 null)
+				width: 80%
+				height: 75%
+				+pad(rem(50px) rem(65px) rem(50px) rem(48px))
 
 
 
