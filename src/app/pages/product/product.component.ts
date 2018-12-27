@@ -11,5 +11,9 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  // heightInf(){
+  //   let heightProd = document.getElementsByClassName('row')
+  //   console.log(heightProd.offsetHeight)
+  // }
+  // heightInf()
 }
