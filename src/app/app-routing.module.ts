@@ -27,9 +27,9 @@ const routes: Routes = [
     {path: 'mua-online-buoc5' , component: MuaOnlineBuoc5Component},
     {path: 'mua-online-buoc6-hoanthanh' , component: MuaOnlineBuoc6HoanthanhComponent},
 
-    {path: 'MuaOnlineBuoc1' , component: MuaOnlineBuoc1Component},
-    {path: 'MuaOnlineBuoc2' , component: MuaOnlineBuoc2Component},
-    {path: 'GiaiQuyetQuyenLoiBH' , component: GiaiquyetquyenloiBHComponent},
+    {path: 'mua-online-buoc1' , component: MuaOnlineBuoc1Component},
+    {path: 'mua-online-buoc2' , component: MuaOnlineBuoc2Component},
+    {path: 'giai-quyet-quyen-loi-BH' , component: GiaiquyetquyenloiBHComponent},
 
 ];
 @NgModule({
