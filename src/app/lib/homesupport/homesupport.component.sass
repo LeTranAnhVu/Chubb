@@ -44,8 +44,14 @@
                         background: $hong
                         span
                             +fz(rem(24px))
-                            &:first-child
-                                margin-right: .4rem
+                            position: relative
+                            &:before
+                                content: '*'
+                                display: block
+                                +fz(rem(24px))
+                                height: rem(24px)
+                                +pos(abs , 50% null null rem(-15px))
+                                +transform(translateY(-50%))
                 .email
                     color: $tim
                     text-decoration: underline

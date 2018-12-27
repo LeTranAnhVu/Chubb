@@ -74,15 +74,22 @@
                     +fz(rem(12px))
                     color: #ffffff
                     .num
-                        display: flex
-                        align-items: center
                         span
                             font-size: rem(30px)
                             +fw(600)
                             display: block
-                            &:first-child
-                                +fw(700)
-                                margin-right: .3rem
+                            padding-left: rem(20px)
+                            position: relative
+                            &:before
+                                content: '*'
+                                display: block
+                                +fz(rem(30px))
+                                height: rem(33px)
+                                +pos(abs , 50% null null 0)
+                                +transform(translateY(-50%))
+                            // &:first-child
+                            //     +fw(700)
+                            //     margin-right: .3rem
     @media screen and (max-width: 991.99px)
         background: $xanh-la
         height: rem(70px)
