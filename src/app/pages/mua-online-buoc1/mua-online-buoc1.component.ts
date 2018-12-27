@@ -11,8 +11,15 @@ export class MuaOnlineBuoc1Component implements OnInit {
     title: 'Tính phí',
     subTitle: 'Các bước mua online'
   };
-  constructor() { }
-
+  flag = false;
+  // onSubmit(e){
+  //   if (flag === e.value.flag) {
+  //     flag = true
+  //   } else {
+  //     flag = false
+  //   }
+  //   console.log(2)
+  // }
   ngOnInit() {
   }
 
