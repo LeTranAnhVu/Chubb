@@ -22,7 +22,7 @@
 						<!-- menu -->
 						<ul>
 							<li *ngFor="let item of menu; let i = index">
-								<a [routerLink]="item.url" [class.active]="i == 0">
+								<a [routerLink]="item.url" [class.active]="i == selectedItem" (click)="selectedItem=i">
 									<div [ngClass]="['mdi', item.icon ]"></div>
 									{{item.name}}
 								</a>

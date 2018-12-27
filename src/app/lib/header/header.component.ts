@@ -10,6 +10,7 @@ import { HeaderMenuService } from '../../services/header-menu.service';
 export class HeaderComponent implements OnInit {
 	constructor(private menuService: HeaderMenuService) { }
 	menu: HeaderMenu[];
+	selectedItem = 0;
 	ngOnInit() {
 		// get data from db by using HeaderMenuService
 		// then return the data to this.menu
