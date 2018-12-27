@@ -14,11 +14,11 @@ export class ProductItemComponent implements OnInit {
 
   seeMoreHandler() {
     // add class active
-    
+
     // emit là phát tín hiệu khi bắt được
     this.whichDetail.emit([this.product.detail, this.index]);
   }
-  
+
   constructor() { }
 
   ngOnInit() {
