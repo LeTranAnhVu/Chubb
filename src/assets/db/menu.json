@@ -1,6 +1,6 @@
 {
 	"menu": [{
-			"name": "Trang chủ",
+			"name": "",
 			"icon": "mdi mdi-home",
 			"url": "/"
 		},

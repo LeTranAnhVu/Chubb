@@ -1,4 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { HeaderMenu } from '../../interfaces/header-menu';
+import { HeaderMenuService } from '../../services/header-menu.service';
 
 @Component({
 	selector: 'app-header',
@@ -6,9 +8,15 @@ import { Component, HostListener, OnInit } from '@angular/core';
 	styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent implements OnInit {
-	constructor() { }
-
+	constructor(private menuService: HeaderMenuService) { }
+	menu: HeaderMenu[];
 	ngOnInit() {
+		// get data from db by using HeaderMenuService
+		// then return the data to this.menu
+		this.menuService.getData().subscribe(data => {
+			this.menu = data.menu;
+		});
+
 	}
 	openMenu() {
 		let menuBtn = document.getElementById('header__trigger');
@@ -27,6 +35,5 @@ export class HeaderComponent implements OnInit {
 		} else {
 			header.classList.remove('active');
 		}
-
 	}
 }
