@@ -1,0 +1,26 @@
+/////////////////////////
+///////Include//////////
+@import '../../../sass/var'
+////////////////////////
+.banner
+	min-height: 150px
+	background: $xanh-la
+	display: flex
+	align-items: flex-end
+	text-align: left
+	padding-bottom: 2.285714rem
+	@media screen and(min-width: 768px)
+		min-height: 300px
+		padding-bottom: rem(60px) 
+	.container
+		width: -webkit-fill-available
+	.title
+		color: white
+		p 
+			+fz(1rem)
+		h2 
+			+fz(1.8rem)
+			+fw(400)
+		@media screen and(min-width: 768px)
+			h2 
+				+fz(rem(36px))

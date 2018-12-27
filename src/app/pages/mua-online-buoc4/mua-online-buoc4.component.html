@@ -1,8 +1,10 @@
+<app-banner02 [content]='bannerContent'></app-banner02>
 <section class="stept_4">
   <div class="container">
     <div class="row">
       <div class="col">
         <h2>Các bạn vui lòng xem lại thông tin trước khi thanh toán</h2>
+        <div id="demo"></div>
 
       </div>
     </div>
@@ -12,7 +14,7 @@
         <div class="total">
           <table>
             <tr>
-              <th class="cell">Hồ sơ số</th>
+              <th class="cell" colspan="2">Hồ sơ số</th>
               <th>
                 <p>xxxxxxxxxxxxxxx</p>
               </th>
@@ -21,8 +23,7 @@
           <!-- end-table-1 -->
           <table>
             <tr>
-              <th class="cell">Bên mua bảo hiểm</th>
-              <th></th>
+              <th class="cell" colspan="2">Bên mua bảo hiểm</th>
             </tr>
             <tr>
               <td>•  Họ và tên </td>
@@ -36,8 +37,7 @@
           <!-- end-table-2 -->
           <table>
               <tr>
-                <th class="cell">Người được bảo hiểm</th>
-                <th></th>
+                <th class="cell" colspan="2">Người được bảo hiểm</th>
               </tr>
               <tr>
                 <td>•  Họ và tên </td>
@@ -60,8 +60,7 @@
           <!-- end-table-3 -->
           <table>
               <tr>
-                <th class="cell">Người thụ hưởng</th>
-                <th></th>
+                <th class="cell" colspan="2">Người thụ hưởng</th>
               </tr>
               <tr>
                 <td>•  Họ và tên </td>
@@ -76,15 +75,14 @@
           <!-- end-table-4 -->
           <table>
               <tr>
-                <th class="cell">Sản phẩm bảo hiểm và phí bảo hiểm</th>
-                <th></th>
+                <th class="cell" colspan="2">Sản phẩm bảo hiểm và phí bảo hiểm</th>
               </tr>
               <tr>
                 <td>•  Sản phẩm bảo hiểm</td>
                 <td>Bảo hiểm hỗ trợ điều trị ung thư - C Care - Lựa chọn B</td>
               </tr>
               <tr>
-                <td>Bảo hiểm hỗ trợ điều trị ung thư - C Care - Lựa chọn B</td>
+                <td>•  Mệnh giá sản phẩm (VNĐ) </td>
                 <td>500.000.000</td>
               </tr>
               <tr>
@@ -109,7 +107,8 @@
             này. Xin lưu ý rằng Khách hàng không thể tiếp tục mà không đánh dấu vào ô dưới đây.</h4>
           <div class="conf">
             <div class="check">
-              <input type="checkbox" name="" id=""> Tôi xác nhận đồng ý và cam kết rằng:
+              <input type="checkbox" name="" id="check"> 
+              <label for="check">Tôi xác nhận đồng ý và cam kết rằng:</label> 
             </div>
             <ul>
               <li>

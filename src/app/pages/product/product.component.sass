@@ -3,3 +3,145 @@
 ///////Include//////////
 @import '../../sass/var'
 ////////////////////////
+.products
+	+pad(rem(30px) 0)
+	@media screen and(min-width: 768px)
+		+pad(rem(50px) 0)
+	.bl-right
+		color: white
+		background: $xanh-la
+		+pad(rem(30px))
+		p 
+			margin-bottom: rem(20px)
+			+fz(rem(15px))
+			&:last-child
+				margin-bottom: 0
+		@media screen and(min-width: 768px)
+			+pad(rem(50px) rem(45px))
+			padding-right: rem(37px)
+			padding-bottom: rem(80px)
+			p 
+				+fz(rem(16px))
+				+lh(1.5)
+				margin-bottom: rem(28px)
+	.bl-left
+		background: url('../../../assets/img/product/product_content_bg.jpg') center center no-repeat
+		background-size: cover
+		min-height: 300px
+		@media screen and(min-width: 768px)
+			min-height: 100%
+	.strong
+		+pad(rem(30px) 0)
+		.item
+			+mar(rem(20px) 0)
+			&:nth-child(3)
+				+mar(rem(20px) 0)
+			&:last-child
+				margin-bottom: 0
+			@media screen and (min-width: 578px)
+				&:nth-child(3),&:last-child
+					margin-bottom: 0
+			figure
+				margin-bottom: 0
+				+pad(rem(37px) rem(17px))
+				box-shadow: inset 0 0 0 1px #ebebeb , inset 0 -4px 0 0 $xanh-duong
+				.boximg
+					margin-bottom: rem(26px)
+					text-align: center
+				figcaption
+					p 
+						color: $den-1
+						+fz(1rem)
+						+lh(1.5)
+			&:nth-child(2)
+				figure
+					box-shadow: inset 0 0 0 1px #ebebeb , inset 0 -4px 0 0 $xanh-la
+			&:nth-child(3)
+				figure
+					box-shadow: inset 0 0 0 1px #ebebeb , inset 0 -4px 0 0 #ff0198
+			&:nth-child(4)
+				figure
+					box-shadow: inset 0 0 0 1px #ebebeb , inset 0 -4px 0 0 #ff6600
+		@media screen and (min-width: 578px)
+			+pad(rem(43px) null rem(43px) null)
+			.item
+				figure
+					height: 100%
+		@media screen and (min-width: 992px)
+			.item
+				margin-bottom: 0
+				figure
+					position: relative
+					.boximg
+						img
+							+transition(color .3s ease-in-out)
+					figcaption
+						h3 , p
+							+transition(color .3s ease-in-out)
+					&:before
+						content: ''
+						display: block
+						width: 100%
+						height: 0
+						background: $xanh-duong
+						+transition(height 0.3s cubic-bezier(0.815, 1.650, 0.400, 0.680))
+						+pos(abs , null null 0 0)
+						z-index: -1
+					&:hover
+						.boximg
+							img
+								filter: brightness(0) invert(1)
+						figcaption
+							h3 , p
+								color: #ffffff
+						&:before
+							height: 100%
+				&:nth-child(2)
+					figure 
+						&:before
+							background: $xanh-la
+				&:nth-child(3)
+					figure 
+						&:before
+							background: #ff0198
+				&:nth-child(4)
+					figure 
+						&:before
+							background: #ff6600
+	.info /////////////////////////////// Info
+		.info-detail
+			margin-top: 1rem
+			.info-details
+				display: inline-block
+				width: 100%
+				height: 100%
+				background: #f5f5f5
+				+pad(rem(25px) rem(25px))
+				h3 
+					+fw(700)
+					+fz(rem(18px))
+					color: $den-1
+					margin-bottom: rem(16px)
+				p 
+					+fz(rem(14px))
+					color: $den-1
+					+lh(1.4)
+		@media screen and (min-width: 768px)
+			.info-detail
+				margin-top: rem(23px)
+				.info-details
+					+pad(rem(30px) rem(25px))
+		.file
+			margin-top: rem(33px)
+			h4 
+				+fz(rem(18px))
+				color: $den-1
+				+fw(400)
+				margin-bottom: rem(22px)
+			a 
+				padding-left: 1rem
+h2 
+	+fz(rem(30px))
+	+fw(400)
+	color: $den-1
+/////////////////////////////// End=Info

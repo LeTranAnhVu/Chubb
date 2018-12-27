@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Buyonline4Component } from './buyonline4.component';
+import { MuaOnlineBuoc2Component } from './mua-online-buoc2.component';
 
-describe('Buyonline4Component', () => {
-  let component: Buyonline4Component;
-  let fixture: ComponentFixture<Buyonline4Component>;
+describe('MuaOnlineBuoc2Component', () => {
+  let component: MuaOnlineBuoc2Component;
+  let fixture: ComponentFixture<MuaOnlineBuoc2Component>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Buyonline4Component ]
+      declarations: [ MuaOnlineBuoc2Component ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Buyonline4Component);
+    fixture = TestBed.createComponent(MuaOnlineBuoc2Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
