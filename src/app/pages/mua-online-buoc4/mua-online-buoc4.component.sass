@@ -70,6 +70,7 @@
 			label
 				position: relative
 				padding-left: calc(1rem + 6px)
+				+lh(1.5rem)
 				&:after
 					content: ''
 					+pos(abs, 0 null null 0 )
@@ -84,11 +85,15 @@
 				&:checked
 					~ label
 						&:before
-							content: '/f00c'
+							content: "\f00c"
 							font-family: "Font Awesome 5 Free"
 							font-weight: 600
 							+pos(abs, 0 null null 0 )
 							display: block
+							line-height: 1rem
+							font-size: 1.2rem
+							z-index: 1
+							color: $xanh-la
 		ul 
 			padding-left: 0
 			counter-reset: my-sec-counter
@@ -112,8 +117,7 @@
 			margin-top: rem(40px)
 			@media screen and(min-width: 720px)
 				margin-top: rem(60px)
-
-			.btn
+			.btn-t
 				width: 12.8rem
 				display: inline-block
 				+bor-rad(20px)
