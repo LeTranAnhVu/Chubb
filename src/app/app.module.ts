@@ -35,48 +35,48 @@ import { ProductComponent } from './pages/product/product.component';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    AboutComponent,
-    ProductComponent,
+	declarations: [
+		AppComponent,
+		HeaderComponent,
+		FooterComponent,
+		AboutComponent,
+		ProductComponent,
 
 
-    ProductItemComponent,
-    ProductDetailComponent,
-    HomeComponent,
-    HomebannerComponent,
-    HomeabvantagesComponent,
-    HomesupportComponent,
-    HomeproductComponent,
+		ProductItemComponent,
+		ProductDetailComponent,
+		HomeComponent,
+		HomebannerComponent,
+		HomeabvantagesComponent,
+		HomesupportComponent,
+		HomeproductComponent,
 
 
-    MuaOnlineBuoc3NhapOTPComponent,
-    MuaOnlineBuoc6HoanthanhComponent,
-    MuaOnlineBuoc5Component,
-    MuaOnlineBuoc4Component,
-    MuaOnlineBuoc3Component,
+		MuaOnlineBuoc3NhapOTPComponent,
+		MuaOnlineBuoc6HoanthanhComponent,
+		MuaOnlineBuoc5Component,
+		MuaOnlineBuoc4Component,
+		MuaOnlineBuoc3Component,
 
-    MuaOnlineBuoc1Component,
-    MuaOnlineBuoc2Component,
-    ThongTinNguoiDuocBaoHiemComponent,
-    ThongTinBenMuaBaoHiemComponent,
-    ThongTinLienLacComponent,
-    GiaiquyetquyenloiBHComponent,
-    DieuKhoanBHComponent,
-    Banner01Component,
-    Banner02Component,
-    ],
+		MuaOnlineBuoc1Component,
+		MuaOnlineBuoc2Component,
+		ThongTinNguoiDuocBaoHiemComponent,
+		ThongTinBenMuaBaoHiemComponent,
+		ThongTinLienLacComponent,
+		GiaiquyetquyenloiBHComponent,
+		DieuKhoanBHComponent,
+		Banner01Component,
+		Banner02Component,
+	],
 
 
-  imports: [
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule, ReactiveFormsModule, HttpClientModule,
-    NgbModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	imports: [
+		BrowserModule,
+		FormsModule,
+		AppRoutingModule, ReactiveFormsModule, HttpClientModule,
+		NgbModule
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,17 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+
+
+
+
+@Injectable({
+	providedIn: 'root'
+})
+export class HeaderMenuService {
+	getData(): Observable<any> {
+		return this.http.get('../assets/db/menu.json');
+	}
+
+	constructor(private http: HttpClient) { }
+}
