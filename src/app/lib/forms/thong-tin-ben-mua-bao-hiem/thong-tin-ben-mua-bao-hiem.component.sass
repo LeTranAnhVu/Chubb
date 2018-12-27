@@ -4,93 +4,101 @@
 ////////////////////////
 
 .form
-  margin-top: rem(30px)
-  border-bottom: 2px #cccccc solid
-  padding-top: rem(30px)
-  padding-bottom: rem(60px)
-  .form-group
-    margin-top: rem(30px)
-    select
-      -webkit-appearance: none
-      -moz-appearance: none
-      appearance: none
-      display: block
-      color: #999999
-      &:after
-        display: block
-        content: '/fa63'
-        font-family: 'Material Design Icons'
-        position: absolute
-        top: 50%
-        transform: translateY(-50%)
-        right: 0
-    label
-      font-weight: bold
-      color: #333333
-      display: block
-      margin-bottom: rem(15px)
-    .form-input
-      width: 100%
-      // height: rem(45px)
-      border: 2px #ebebeb solid
-      border-radius: 2px
-      padding: rem(12px) rem(20px)
-  .form-check
-    margin-top: rem(20px)
-    .policy-link
-      color: #7acb00
-    .hidden
-      display: none
-    .form-label-check
-      position: relative
-      padding-left: rem(25px)
-      display: block
-      &:before
-        display: block
-        content: ""
-        border-radius: 2px
-        border: 2px #7acb00 solid
-        height: rem(20px)
-        width: rem(20px)
-        position: absolute
-        top: 0
-        left: 0
-    .form-check-input
-      &:checked
-        ~ .form-label-check
-          &:before
-            background: #7acb00
-          &:after
-            display: block
-            content: "/f00c"
-            height: rem(20px)
-            width: rem(20px)
-            position: absolute
-            top: 0
-            left: 0
-            font-family: 'FontAwesome'
-            color: #ffffff
-  .message-box
-    margin-top: rem(15px)
-    .alert-danger
-      font-style: italic
-      color: #ff0000
-  .button-group
-    margin-top: rem(15px)
-    .btn
-      width: rem(100px)
-      padding: rem(10px)
-      border: 0
-      border-radius: rem(22px)
-      margin-left: rem(10px)
-      display: inline-block
-      float: right
-      color: #ffffff
-      font-family: inherit
-    .btn-xam
-      background: #5b6268
-    .btn-xanh
-      background: #7acb00
-    @media screen and(min-width: 992px)
-      .btn
-        width: rem(180px)
+	margin-top: rem(30px)
+	border-bottom: 2px #cccccc solid
+	padding-top: rem(30px)
+	padding-bottom: rem(60px)
+	.form-aft
+		position: relative
+		&:after
+			background: url('../../../../assets/img/icon.png')
+			position: absolute
+			content: ''
+			width: 7px
+			height: 14px
+			+fz(18px)
+			color: #666666
+			top: 50%
+			transform: translateY(-50%)
+			right: rem(17px)
+	.form-group
+		margin-top: rem(30px)
+	select
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		display: block
+		color: #999999
+	label
+		font-weight: bold
+		color: #333333
+		display: block
+		margin-bottom: rem(15px)
+	.form-input
+		width: 100%
+		// height: rem(45px)
+		border: 2px #ebebeb solid
+		border-radius: 2px
+		padding: rem(12px) rem(20px)
+		color: #999999
+		&:focus
+			outline: none
+	.form-check
+	margin-top: rem(20px)
+	.policy-link
+	  color: #7acb00
+	.hidden
+	  display: none
+	.form-label-check
+		position: relative
+		padding-left: rem(25px)
+		display: block
+		&:before
+			display: block
+			content: ""
+			border-radius: 2px
+			border: 2px #7acb00 solid
+			height: rem(20px)
+			width: rem(20px)
+			position: absolute
+			top: 0
+			left: 0
+	.form-check-input
+		&:checked
+		~ .form-label-check
+			&:before
+				background: #7acb00
+			&:after
+				display: block
+				content: "/f00c"
+				height: rem(20px)
+				width: rem(20px)
+				position: absolute
+				top: 0
+				left: 0
+				font-family: 'FontAwesome'
+				color: #ffffff
+	.message-box
+		margin-top: rem(15px)
+	.alert-danger
+		font-style: italic
+		color: #ff0000
+	.button-group
+		margin-top: rem(15px)
+	.btn
+		width: rem(100px)
+		padding: rem(10px)
+		border: 0
+		border-radius: rem(22px)
+		margin-left: rem(10px)
+		display: inline-block
+		float: right
+		color: #ffffff
+		font-family: inherit
+	.btn-xam
+		background: #5b6268
+	.btn-xanh
+		background: #7acb00
+	@media screen and(min-width: 992px)
+		.btn
+			width: rem(180px)
