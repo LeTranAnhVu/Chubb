@@ -1,5 +1,5 @@
 export interface BannerContent {
-  titles: string[];
-  subTitle?: string[];
-  img: string;
+	titles: string[];
+	subTitle?: string[];
+	img: string;
 }
