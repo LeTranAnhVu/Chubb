@@ -8,7 +8,9 @@ import { ACTIVE_INDEX } from '@angular/core/src/render3/interfaces/container';
 })
 export class ProductDetailComponent implements OnInit {
   @Input() detail;
+  @Input() color;
   @Input() active;
+  
   constructor() { }
   ngOnInit() {
   }

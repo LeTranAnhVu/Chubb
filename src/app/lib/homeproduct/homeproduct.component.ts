@@ -67,6 +67,11 @@ let productsMockup: IProduct[] = [
     }
   },
 ];
+
+let colorsTheme = [
+  'green', 'orange', 'purple'
+];
+
 @Component({
   selector: 'app-homeproduct',
   templateUrl: './homeproduct.component.html',
@@ -76,12 +81,14 @@ let productsMockup: IProduct[] = [
 export class HomeproductComponent  {
   @Input() active;
   isActive = false;
+  currentIndex = 0;
+  colors = colorsTheme;
   products: IProduct[] = productsMockup;
   detail = this.products[0].detail;
-  onDetail(detail: any) {
-    console.log('form app', detail);
-    this.detail = detail;
+  onDetail(data: any) {
+    console.log('form app', data);
+    this.detail = data[0];
+    this.currentIndex = data[1];
     this.isActive = !this.isActive;
   }
-  
 }
