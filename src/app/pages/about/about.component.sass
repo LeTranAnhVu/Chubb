@@ -5,6 +5,9 @@
 
 
 .about
+	+pad(rem(30px) 0)
+	@media screen and (min-width: 768px)
+		+pad(rem(50px) 0)
 	.content-container
 		padding-bottom: rem(60px)
 	.outer-box
@@ -13,17 +16,15 @@
 		background-size: cover
 	.content-box-01
 		color: #323232
-		padding: rem(25px) rem(10px)
+		margin-bottom: 2rem
 	.content-box-02
 		color: #ffffff
 		background: #01c1d6
 		padding: 2rem 1rem
-
-
 	.content-box
 		.title
-			margin-bottom: rem(28px)
-			font-size: rem(25px)
+			margin-bottom: rem(23px)
+			font-size: rem(28px)
 			font-weight: normal
 		p
 			margin-bottom: rem(14px)
@@ -40,6 +41,7 @@
 		.content-box-01
 			margin-left: rem(220px)
 			padding: rem(45px) 0
+			margin-bottom: 0
 		.content-box
 			.title
 				font-size: rem(30px)
