@@ -20,6 +20,7 @@ const routes: Routes = [
     {path: 'MuaOnlineBuoc1' , component: MuaOnlineBuoc1Component},
     {path: 'MuaOnlineBuoc2' , component: MuaOnlineBuoc2Component},
     {path: 'GiaiQuyetQuyenLoiBH' , component: GiaiquyetquyenloiBHComponent},
+
 ];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
