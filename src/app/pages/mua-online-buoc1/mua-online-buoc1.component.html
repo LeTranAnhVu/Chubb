@@ -124,12 +124,12 @@
             <label class="form-label-check" for="isVietNamese">Bên mua Bảo hiểm và Người được Bảo hiểm có quốc tịch duy nhất là Việt Nam.</label>
           </div>
           <div class="form-check">
-            <input id="isAgreePolicy" class="form-check-input hidden" type="checkbox" name="flag">
+            <input id="isAgreePolicy" class="form-check-input hidden" type="checkbox" [(ngModel)]="check" name="check">
             <label class="form-label-check" for="isAgreePolicy">Tôi đồng ý với
               <a class="policy-link" href="#">điều kiện & Điều khoản.</a>
             </label>
           </div>
-          <div class="message-box" *ngIf="flag" >
+          <div class="message-box" [class.active]="flag">
             <p class="alert-danger">Vui lòng đánh dấu vào ô “Tôi đồng ý Điều kiện & Điều khoản” nếu Quý khách đã xem qua Điều kiện & Điều khoản của Chubb Life.</p>
           </div>
         </div>

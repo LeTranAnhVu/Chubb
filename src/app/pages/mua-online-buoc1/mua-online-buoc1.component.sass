@@ -86,10 +86,15 @@
 						transform: translateX(10%)
 	.message-box
 		margin-top: rem(15px)
+		height: 0
+		transition: .3s all ease-in-out
+		overflow: hidden
 		.alert-danger
 			font-style: italic
 			color: #ff0000
 			background: transparent
+		&.active
+			height: rem(50px)
 .form-aft
 	position: relative
 	&:after
