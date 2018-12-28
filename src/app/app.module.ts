@@ -18,19 +18,22 @@ import { HomeabvantagesComponent } from './lib/homeabvantages/homeabvantages.com
 import { HomebannerComponent } from './lib/homebanner/homebanner.component';
 import { HomeproductComponent } from './lib/homeproduct/homeproduct.component';
 import { HomesupportComponent } from './lib/homesupport/homesupport.component';
+import { MuaOnlineBuoc1Component } from './lib/muaonline/mua-online-buoc1/mua-online-buoc1.component';
 import { ProductDetailComponent } from './lib/product-detail/product-detail.component';
 import { ProductItemComponent } from './lib/product-item/product-item.component';
 import { AboutComponent } from './pages/about/about.component';
 import { GiaiquyetquyenloiBHComponent } from './pages/giaiquyetquyenloi-bh/giaiquyetquyenloi-bh.component';
 import { HomeComponent } from './pages/home/home.component';
-import { MuaOnlineBuoc1Component } from './pages/mua-online-buoc1/mua-online-buoc1.component';
 import { MuaOnlineBuoc2Component } from './pages/mua-online-buoc2/mua-online-buoc2.component';
 import { MuaOnlineBuoc3NhapOTPComponent } from './pages/mua-online-buoc3-nhap-otp/mua-online-buoc3-nhap-otp.component';
 import { MuaOnlineBuoc3Component } from './pages/mua-online-buoc3/mua-online-buoc3.component';
 import { MuaOnlineBuoc4Component } from './pages/mua-online-buoc4/mua-online-buoc4.component';
 import { MuaOnlineBuoc5Component } from './pages/mua-online-buoc5/mua-online-buoc5.component';
 import { MuaOnlineBuoc6HoanthanhComponent } from './pages/mua-online-buoc6-hoanthanh/mua-online-buoc6-hoanthanh.component';
+import { MuaOnlineComponent } from './pages/mua-online/mua-online.component';
 import { ProductComponent } from './pages/product/product.component';
+
+
 
 
 
@@ -67,6 +70,7 @@ import { ProductComponent } from './pages/product/product.component';
 		DieuKhoanBHComponent,
 		Banner01Component,
 		Banner02Component,
+		MuaOnlineComponent,
 	],
 
 

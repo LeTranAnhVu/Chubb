@@ -1,0 +1,41 @@
+
+/////////////////////////
+///////Include//////////
+@import '../../sass/var'
+////////////////////////
+
+.mua-online-content
+	background: #f5f5f5
+	+pad(rem(30px))
+	@media screen and(min-width: 720px)
+		+pad(rem(50px))
+	.next-step
+		display: flex
+		width: 100%
+		justify-content: flex-end
+		margin-top: rem(30px)
+		@media screen and(min-width: 720px)
+			margin-top: rem(30px)
+		.btn-t
+			width: 12.8rem
+			display: inline-block
+			+bor-rad(20px)
+			text-align: center
+			line-height: rem(40px)
+			color: white
+			text-decoration: none
+			height: rem(40px)
+			+fz(1rem)
+			border: 0
+			+fw(bold)
+			cursor: pointer
+			margin-right: .7rem
+			&:focus
+				outline: 0
+			&.prev
+				background: $den-2
+			&.otp
+				background: #00688a
+			&.next
+				background: $xanh-la
+				margin-right: 0
