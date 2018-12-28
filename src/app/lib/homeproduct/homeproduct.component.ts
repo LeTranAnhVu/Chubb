@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 interface IProduct {
   img: string;
-  theme: string;
+  // theme: string;
   title: string;
   price: string;
   description: string;
@@ -17,7 +17,7 @@ interface IProductDetail {
 let productsMockup: IProduct[] = [
   {
     img: '../../assets/img/home/home_product_1.jpg',
-    theme: 'green',
+    // theme: 'green',
     title: 'C Care – Lựa chọn Cơ bản',
     price: '200 triệu đồng',
     description: 'Với mức phí chỉ từ 450 đồng/ngày, bạn sẽ được bảo vệ lên đến 5 năm trước những hiểm họa rình rập bởi bệnh ung thư.',
@@ -34,7 +34,7 @@ let productsMockup: IProduct[] = [
   },
   {
     img: '../../assets/img/home/home_product_2.jpg',
-    theme: 'orange',
+    // theme: 'orange',
     title: 'C Care – Lựa chọn Nâng cao',
     price: '300 triệu đồng',
     description: 'Hỗ trợ điều trị bệnh ung thư cho từng giai đoạn, mang lại sự an tâm về tinh thần và sự đảm bảo về tài chính cho bạn và gia đình..',
@@ -51,7 +51,7 @@ let productsMockup: IProduct[] = [
   },
   {
     img: '../../assets/img/home/home_product_3.jpg',
-    theme: 'purple',
+    // theme: 'purple',
     title: 'C Care – Lựa chọn Ưu việt',
     price: '500 triệu đồng',
     description: 'Bạn có thể mua gì với 1.000 đồng? Với “C Care – Lựa chọn Ưu việt”, chỉ từ 1.000 đồng/ngày, bạn sẽ sở hữu một hợp đồng bảo hiểm sức khỏe có mệnh giá cao và mức phí vô cùng hợp lý.',
@@ -67,6 +67,11 @@ let productsMockup: IProduct[] = [
     }
   },
 ];
+
+let colorsTheme = [
+  'green', 'orange', 'purple'
+];
+
 @Component({
   selector: 'app-homeproduct',
   templateUrl: './homeproduct.component.html',
@@ -76,12 +81,14 @@ let productsMockup: IProduct[] = [
 export class HomeproductComponent  {
   @Input() active;
   isActive = false;
+  currentIndex = 0;
+  colors = colorsTheme;
   products: IProduct[] = productsMockup;
   detail = this.products[0].detail;
-  onDetail(detail: any) {
-    console.log('form app', detail);
-    this.detail = detail;
+  onDetail(data: any) {
+    console.log('form app', data);
+    this.detail = data[0];
+    this.currentIndex = data[1];
     this.isActive = !this.isActive;
   }
-  
 }

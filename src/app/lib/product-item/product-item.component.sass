@@ -3,6 +3,16 @@
 ///////Include//////////
 @import '../../sass/var'
 ////////////////////////
+
+$theme: $xanh-la
+.green
+    $theme: $xanh-la
+.orange
+    $theme: $cam
+.purple
+    $theme: $tim
+    
+
 ::ng-deep .product-item
     .item
         margin-bottom: 1.3rem
@@ -75,14 +85,14 @@
                                 outline: none
         &:first-child
             figure
-                +box-sha(inset 0 -4px 0 0 $xanh-la)
+                +box-sha(inset 0 -4px 0 0 $theme)
                 figcaption
                     h5
-                        color: $xanh-la
+                        color: $theme
                     .group-btn
                         .buy-btn
                             a
-                                background: $xanh-la
+                                background: $theme
         &:nth-child(2)
             figure
                 +box-sha(inset 0 -4px 0 0 $cam)

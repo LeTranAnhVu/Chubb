@@ -16,7 +16,12 @@
 .product-detail-wrap
     background: #ffffff
     +pad(rem(20px) rem(20px) rem(40px) rem(20px))
-    +box-sha(inset 0 -4px 0 0 $xanh-la)
+    &.green
+        +box-sha(inset 0 -4px 0 0 $xanh-la)
+    &.orange
+        +box-sha(inset 0 -4px 0 0 $cam)
+    &.purple
+        +box-sha(inset 0 -4px 0 0 $tim)
     .block-detail
         h5
             +fz(rem(18px))

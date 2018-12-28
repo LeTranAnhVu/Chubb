@@ -78,30 +78,38 @@
 						color: #666
 						&:after
 							content: ''
-							+pos(abs, 50% null null 0 )
+							+pos(abs, 0 null null 0 )
 							display: block
-							width: rem(20px)
+							width: rem(21px)
 							background: transparent
-							border: 2px solid $xanh-la
-							height: rem(20px)
-							transform: translateY(-50%)
-							+bor-rad(50%)
+							+box-sha(inset 0 0 0 2px $xanh-la)
+							// border: 2px solid $xanh-la
+							height: rem(21px)
+							// transform: translateY(-50%)
+							+bor-rad(100%)
 							+mar(0)
+						&:before
+							content: ''
+							font-family: "Font Awesome 5 Free"
+							font-weight: 600
+							width: rem(11px)
+							background: $xanh-la
+							height: rem(11px)
+							// transform: translateX(53%) translateY(20%)
+							+bor-rad(50%)
+							+pos(abs, 5px null null 5px )
+							display: block
+							opacity: 0
+							+transform(scale(0))
+							+transition(all .2s ease)
 					input 
 						display: none
 						&:checked
 							~ label
 								&:before
-									content: ''
-									font-family: "Font Awesome 5 Free"
-									font-weight: 600
-									width: rem(10px)
-									background: $xanh-la
-									height: rem(10px)
-									transform: translateX(53%) translateY(20%)
-									+bor-rad(50%)
-									+pos(abs, 4px null null 0 )
-									display: block
+									opacity: 1
+									+transform(scale(1))
+								
 			
 .next-stept
 	display: flex
@@ -110,7 +118,7 @@
 	margin-top: rem(30px)
 	@media screen and(min-width: 720px)
 		margin-top: rem(30px)
-	.btn
+	.btn-t
 		width: 12.8rem
 		display: inline-block
 		+bor-rad(20px)
