@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
 		// then return the data to this.menu
 		this.menuService.getData().subscribe(data => {
 			this.menu = data.menu;
+			console.log(data)
 		});
 
 	}
