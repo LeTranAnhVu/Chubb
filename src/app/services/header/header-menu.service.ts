@@ -12,6 +12,5 @@ export class HeaderMenuService {
 	getData(): Observable<any> {
 		return this.http.get('../assets/db/menu.json');
 	}
-
 	constructor(private http: HttpClient) { }
 }

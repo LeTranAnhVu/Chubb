@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { HeaderMenu } from '../../interfaces/header-menu';
-import { HeaderMenuService } from '../../services/header-menu.service';
+import { HeaderMenuService } from '../../services/header/header-menu.service';
 
 @Component({
 	selector: 'app-header',
@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
 		// then return the data to this.menu
 		this.menuService.getData().subscribe(data => {
 			this.menu = data.menu;
+			// console.log(data);
 		});
 
 	}
