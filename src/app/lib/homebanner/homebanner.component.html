@@ -8,10 +8,10 @@
 						<div class="row">
 							<div class="col-12">
 								<div class="title-wrap">
-									<h3 [innerHTML]="banner.title">
+									<h3 *ngIf="banner.title" [innerHTML]="banner.title">
 									</h3>
-									<p>{{banner.description}}</p>
-									<a href="{{banner.url}}">Tìm hiểu thêm </a>
+									<p *ngIf="banner.description" [innerHTML]="banner.description"></p>
+									<a *ngIf="banner.url" href="{{banner.url}}">Tìm hiểu thêm </a>
 								</div>
 
 							</div>
