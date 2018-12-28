@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit {
 	headerScroll() {
 		let number = window.pageYOffset;
 		let header = document.getElementById('canhcam__header');
-		if (number > 150) {
+		if (number > 0) {
 			header.classList.add('active');
 		} else {
 			header.classList.remove('active');

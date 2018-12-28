@@ -72,15 +72,19 @@ $theme: $xanh-la
                             background: none
                             border: none
                             +pad(0)
+                            padding-right: 1.5rem
                             cursor: pointer
+                            position: relative
                             &:after
                                 content: '\f140'
                                 font-family: 'Material Design Icons'
                                 +fz(rem(18px))
-                                +lh(rem(18px))
+                                // +lh(rem(18px))
                                 color: #333333
                                 display: inline-block
-                                margin-left: rem(8px)
+                                // margin-left: rem(8px)
+                                +pos(abs , 50% 0 null null)
+                                +transform(translateY(-50%))
                             &:focus
                                 outline: none
         &:first-child
