@@ -1,20 +1,9 @@
-import { Component, Input } from '@angular/core';
-interface IProduct {
-	img: string;
-	// theme: string;
-	title: string;
-	price: string;
-	description: string;
-	detail: IProductDetail;
-}
+import { Component, Input, OnInit } from '@angular/core';
+import { HomeProduct , HomeroductDetail} from '../../interfaces/product-home';
+import { ProductService } from '../../services/product/product.service';
 
-interface IProductDetail {
-	title: string;
-	description: string;
-	contents: string[];
-}
 
-// let productsMockup: IProduct[] = 
+
 
 let colorsTheme = [
 	'green', 'orange', 'purple'
@@ -26,24 +15,32 @@ let colorsTheme = [
 	styleUrls: ['./homeproduct.component.sass']
 })
 
-export class HomeproductComponent  {
+export class HomeproductComponent implements OnInit {
+	constructor(private homeProductService: ProductService) {}
+	productitems: HomeProduct[];
+	productdetail: HomeroductDetail[];
 	@Input() active;
 	// Active product-detail-wrap
 	isActive = false;
 	// color Array
 	currentIndex = 0;
 	colors = colorsTheme;
-	products: IProduct[] = productsMockup;
-	detail = this.products[0].detail;
 	// Array col start from 0
 	selectedCol = 0;
 	onDetail(data: any) {
-
-		console.log('form app', data);
-		this.detail = data[0];
+		// Get product detail when click
+		this.productdetail = data[0];
 		this.currentIndex = data[1];
 		// Active col-lg-4 khi mà đúng màu 
 		this.selectedCol = this.currentIndex;
 		this.isActive = !this.isActive;
+	}
+	
+	ngOnInit() {
+		this.homeProductService.getData().subscribe(data => {
+			this.productitems = data.homeproduct;
+			this.productdetail = data.homeproduct[0].detail;
+			console.log(this.productdetail);
+		});
 	}
 }

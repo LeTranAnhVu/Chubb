@@ -11,11 +11,16 @@ export class ProductDetailComponent implements OnInit {
 	@Input() detail;
 	@Input() color;
 	@Input() active;
-	@ViewChild('productBackDrop') productBackDrop: ElementRef;
+	// @ViewChild('productBackDrop') productBackDrop: ElementRef;
 	constructor() { }
 	ngOnInit() {
+		setTimeout(() => {
+			console.log('++++++++');
+			console.log(this.detail);
+
+		}, 1000);
 	}
-	
+
 	backDropRemoveClass() {
 		this.isActive = !this.isActive;
 	}
