@@ -21,8 +21,8 @@
 					<nav>
 						<!-- menu -->
 						<ul>
-							<li *ngFor="let item of menu; let i = index">
-								<a [routerLink]="item.url" [class.active]="i == selectedItem" (click)="selectedItem=i">
+							<li *ngFor="let item of menu">
+								<a [routerLink]="item.url" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
 									<div [ngClass]="['mdi', item.icon ]"></div>
 									{{item.name}}
 								</a>
