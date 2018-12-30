@@ -5,7 +5,7 @@
 		<div class="header__wrap--inner">
 			<!-- logo -->
 			<div class="header__logo">
-				<a [routerLink]="menu[0].url">
+				<a [routerLink]="menu ? menu[0].url : null ">
 					<img src="../../../assets/img/logo.png" alt="">
 				</a>
 			</div>
