@@ -2,9 +2,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+
 /// Plugin /////////
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 
 
 // Pages and Components
@@ -82,9 +82,7 @@ import { ProductComponent } from './pages/product/product.component';
 		BrowserModule,
 		FormsModule,
 		AppRoutingModule, ReactiveFormsModule, HttpClientModule,
-		NgbModule,
-		OwlDateTimeModule,
-		OwlNativeDateTimeModule
+		NgbModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
