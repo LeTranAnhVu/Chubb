@@ -2,8 +2,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-/// Bootstrap /////////
+/// Plugin /////////
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+
+
+// Pages and Components
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Banner01Component } from './lib/banner/banner01/banner01.component';
@@ -78,7 +82,9 @@ import { ProductComponent } from './pages/product/product.component';
 		BrowserModule,
 		FormsModule,
 		AppRoutingModule, ReactiveFormsModule, HttpClientModule,
-		NgbModule
+		NgbModule,
+		OwlDateTimeModule,
+		OwlNativeDateTimeModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
