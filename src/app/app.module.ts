@@ -1,7 +1,8 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 /// Plugin /////////
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -100,7 +101,8 @@ import { ProductComponent } from './pages/product/product.component';
 		AppRoutingModule, ReactiveFormsModule, HttpClientModule,
 		NgbModule,
 		OwlDateTimeModule,
-		OwlNativeDateTimeModule
+		OwlNativeDateTimeModule,
+		BrowserAnimationsModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
