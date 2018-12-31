@@ -56,6 +56,7 @@ import { ProductComponent } from './pages/product/product.component';
 
 
 
+
 @NgModule({
 	declarations: [
 		AppComponent,
