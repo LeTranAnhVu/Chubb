@@ -1,7 +1,7 @@
 interface ICalendar {
-	day: number[];
-	month: number[];
-	year: number[];
+	day: string[];
+	month: string[];
+	year: string[];
 }
 
 export class CalendarModel {
@@ -18,10 +18,12 @@ export class CalendarModel {
 	private calendar: ICalendar;
 
 	// methods
-	genNumber(from: number, to: number): number[] {
-		let res: number[] = [];
-		for (let index: number = from; index <= to; index++) {
-			res.push(index);
+	genNumber(from: number, to: number): string[] {
+		let res: string[] = [];
+		for (let index: any = from; index <= to; index++) {
+			// console.log(typeof(index));
+			
+			res.push((index.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})));
 		}
 		return res;
 	}

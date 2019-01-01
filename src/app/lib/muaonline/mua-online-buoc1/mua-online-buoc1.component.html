@@ -16,15 +16,15 @@
 						<div class="row">
 							<div class="col-4">
 								<div class="form-aft">
-									<select name="day" class="form-input">
-										<option *ngFor="let day of calendarModel.day" value="day">{{day}}</option>
+									<select id="formDay" name="day" class="form-input">
+										<option *ngFor="let day of calendarModel.day" value="{{day}}">{{day}}</option>
 									</select>
 								</div>
 							</div>
 							<div class="col-4">
 								<div class="form-aft">
-									<select name="month" class="form-input">
-										<option *ngFor="let month of calendarModel.month" value="month">{{month}}</option>
+									<select id="formMonth" name="month" class="form-input">
+										<option *ngFor="let month of calendarModel.month" value="{{month}}">{{month}}</option>
 										
 									</select>
 								</div>
@@ -32,8 +32,8 @@
 							</div>
 							<div class="col-4">
 								<div class="form-aft">
-									<select name="year" class="form-input">
-										<option *ngFor="let year of calendarModel.year" value="year">{{year}}</option>
+									<select id="formYear" name="year" class="form-input">
+										<option *ngFor="let year of calendarModel.year" value="{{year}}">{{year}}</option>
 										
 
 									</select>
