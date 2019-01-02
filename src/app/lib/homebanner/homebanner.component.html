@@ -1,20 +1,17 @@
 <section class="canhcam-home-banner">
-	<ngb-carousel *ngIf="images">
-		<ng-template ngbSlide>
-			<img [src]="images[0]" alt="Random first slide">
+	<ngb-carousel>
+		<ng-template ngbSlide *ngFor="let banner of bannerhome ; let i = index">
+			<img src="{{banner.src}}">
 			<div class="carousel-caption">
 				<div class="title">
 					<div class="container">
 						<div class="row">
 							<div class="col-12">
 								<div class="title-wrap">
-									<h3>
-										Trang giao dịch bảo hiểm trực tuyến
-										<br>
-										Chubb Life Việt Nam
+									<h3 *ngIf="banner.title" [innerHTML]="banner.title">
 									</h3>
-									<p></p>
-									<a href="">Tìm hiểu thêm </a>
+									<p *ngIf="banner.description" [innerHTML]="banner.description"></p>
+									<a *ngIf="banner.url" href="{{banner.url}}">Tìm hiểu thêm </a>
 								</div>
 
 							</div>

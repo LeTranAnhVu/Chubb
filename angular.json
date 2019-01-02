@@ -29,6 +29,7 @@
               "./bower_components/font-awesome/scss/fontawesome.scss",
               "./bower_components/mdi/css/materialdesignicons.min.css",
               "./bower_components/linearicons/dist/web-font/style.css",
+              "./node_modules/ng-pick-datetime/assets/style/picker.min.css",
               "src/styles.sass"
             ],
             "scripts": []

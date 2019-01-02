@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BannerContent_2 } from '../../interfaces/banner-content-2';
 
 let links = [
@@ -26,20 +27,27 @@ export class MuaOnlineComponent implements OnInit {
 		title: 'Online',
 		subTitle: 'XXXXXXXX'
 	};
-	constructor() {
+	constructor(private router: Router) {
 		this.links = links;
-		// this.nextLink = '';
-		// this.prevLink = '';
 	}
-	nextHandler(): void {
-		// console.log('vo day', this.links.length, this.cursor);
-		if (this.cursor < this.links.length) {
+	nextStep(): void {
+		console.log('vo day', this.cursor);
+		if (this.cursor < (this.links.length - 1)) {
 			this.cursor++;
-			console.log('vo day', this.cursor);
+			// console.log('vo day', this.cursor);
+			let link: string = this.links[this.cursor];
+			this.router.navigate([link]);
 		}
-
 	}
-
+	backStep(): void {
+		console.log('vo day back', this.cursor);
+		if (this.cursor > 0) {
+			this.cursor--;
+			// console.log('vo day', this.cursor);
+			let link: string = this.links[this.cursor];
+			this.router.navigate([link]);
+		}
+	}
 	ngOnInit() {
 	}
 

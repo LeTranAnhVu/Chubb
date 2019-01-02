@@ -1,11 +1,17 @@
 <section class="container-fluid banner-container">
-  <img class="img-fluid img-banner" [src]="content.img" alt="about banner">
-  <div class="page-title">
-    <h3 *ngFor="let title of content.titles">
-      {{title}}
-    </h3>
-    <h5 *ngIf='content.subTitle' [class]=''>
-      {{content.subTitle}}
-    </h5>
-  </div>
+	<img class="img-fluid img-banner" [src]="content.img" alt="about banner">
+	<div class="page-title">
+		<div class="container">
+			<div class="title">
+				<h3 *ngFor="let title of content.titles">
+					{{title}}
+				</h3>
+				<h5 *ngIf='content.subTitle' [class]=''>
+					{{content.subTitle}}
+				</h5>
+			</div>
+
+		</div>
+
+	</div>
 </section>

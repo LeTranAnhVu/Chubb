@@ -1,5 +1,5 @@
 <div class="product-backdrop"  [class.active]="active == !isActive" (click)="backDropRemoveClass()"></div>
-<div class="product-detail-wrap" [class.special]="active == !isActive" [ngClass]="color">
+<div *ngIf="detail" class="product-detail-wrap" [class.special]="active == !isActive" [ngClass]="color">
   <div class="block-detail">
     <h5>{{detail.title}}</h5>
     <p>{{detail.description}}</p>

@@ -3,11 +3,13 @@
 <header class="canhcam__header" id="canhcam__header">
 	<div class="header__wrap container">
 		<div class="header__wrap--inner">
+			<!-- logo -->
 			<div class="header__logo">
-				<a [routerLink]="">
+				<a [routerLink]="menu ? menu[0].url : null ">
 					<img src="../../../assets/img/logo.png" alt="">
 				</a>
 			</div>
+			<!-- end logo -->
 			<div class="header__btn">
 				<svg class="header__trigger" id="header__trigger" viewBox="0 0 100 100" width="80" (click)="openMenu()">
 					<path class="line line--top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
@@ -21,8 +23,8 @@
 					<nav>
 						<!-- menu -->
 						<ul>
-							<li *ngFor="let item of menu; let i = index">
-								<a [routerLink]="item.url" [class.active]="i == selectedItem" (click)="selectedItem=i">
+							<li *ngFor="let item of menu">
+								<a [routerLink]="item.url" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
 									<div [ngClass]="['mdi', item.icon ]"></div>
 									{{item.name}}
 								</a>
