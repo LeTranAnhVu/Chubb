@@ -22,13 +22,6 @@
               "src/favicon.ico"
             ],
             "styles": [
-              "./bower_components/bootstrap/scss/bootstrap.scss",
-              "./bower_components/font-awesome/scss/brands.scss",
-              "./bower_components/font-awesome/scss/solid.scss",
-              "./bower_components/font-awesome/scss/regular.scss",
-              "./bower_components/font-awesome/scss/fontawesome.scss",
-              "./bower_components/mdi/css/materialdesignicons.min.css",
-              "./bower_components/linearicons/dist/web-font/style.css",
               "src/styles.sass"
             ],
             "scripts": []

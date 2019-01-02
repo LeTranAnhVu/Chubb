@@ -2,8 +2,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-/// Bootstrap /////////
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+/// Plugin /////////
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+// Pages and Components
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Banner01Component } from './lib/banner/banner01/banner01.component';
@@ -27,6 +30,7 @@ import { MuaOnlineBuoc1Component } from './lib/muaonline/mua-online-buoc1/mua-on
 import { MuaOnlineBuoc2Component } from './lib/muaonline/mua-online-buoc2/mua-online-buoc2.component';
 import { MuaOnlineBuoc3NhapOtpComponent } from './lib/muaonline/mua-online-buoc3-nhap-otp/mua-online-buoc3-nhap-otp.component';
 import { MuaOnlineBuoc3Component } from './lib/muaonline/mua-online-buoc3/mua-online-buoc3.component';
+// import {MuaOnlineBuoc3NhapOtpComponent } from './lib/muaonline/mua-online-buoc3-nhap-otp/mua-online-buoc3-nhap-otp.component.ts';
 import { MuaOnlineBuoc4Component } from './lib/muaonline/mua-online-buoc4/mua-online-buoc4.component';
 import { MuaOnlineBuoc5Component } from './lib/muaonline/mua-online-buoc5/mua-online-buoc5.component';
 import { MuaOnlineBuoc6HoanthanhComponent } from './lib/muaonline/mua-online-buoc6-hoanthanh/mua-online-buoc6-hoanthanh.component';
@@ -38,6 +42,7 @@ import { GiaiquyetquyenloiBHComponent } from './pages/giaiquyetquyenloi-bh/giaiq
 import { HomeComponent } from './pages/home/home.component';
 import { MuaOnlineComponent } from './pages/mua-online/mua-online.component';
 import { ProductComponent } from './pages/product/product.component';
+
 
 
 
@@ -73,6 +78,7 @@ import { ProductComponent } from './pages/product/product.component';
 		MuaOnlineBuoc2Component,
 		MuaOnlineBuoc3Component,
 		MuaOnlineBuoc3NhapOtpComponent,
+		// MuaOnlineBuoc3NhapOTPComponent,
 		MuaOnlineBuoc4Component,
 		MuaOnlineBuoc5Component,
 		MuaOnlineBuoc6HoanthanhComponent,
@@ -86,6 +92,7 @@ import { ProductComponent } from './pages/product/product.component';
 		Banner02Component,
 		MuaOnlineComponent,
 		ButtonsComponent,
+
 	],
 
 
@@ -93,7 +100,9 @@ import { ProductComponent } from './pages/product/product.component';
 		BrowserModule,
 		FormsModule,
 		AppRoutingModule, ReactiveFormsModule, HttpClientModule,
-		NgbModule
+		NgbModule,
+
+		BrowserAnimationsModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

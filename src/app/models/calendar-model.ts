@@ -1,8 +1,5 @@
-interface ICalendar {
-	day: number[];
-	month: number[];
-	year: number[];
-}
+
+import { ICalendar } from '../interfaces/calendar';
 
 export class CalendarModel {
 	constructor() {
@@ -18,10 +15,13 @@ export class CalendarModel {
 	private calendar: ICalendar;
 
 	// methods
-	genNumber(from: number, to: number): number[] {
-		let res: number[] = [];
-		for (let index: number = from; index <= to; index++) {
-			res.push(index);
+	genNumber(from: number, to: number): string[] {
+		let res: string[] = [];
+		for (let index: any = from; index <= to; index++) {
+			
+			// Convert 1 to 01 ,...... 
+			// Convert number to string
+			res.push((index.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false})));
 		}
 		return res;
 	}
