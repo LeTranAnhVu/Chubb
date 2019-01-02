@@ -86,7 +86,6 @@ import { ProductComponent } from './pages/product/product.component';
 		Banner02Component,
 		MuaOnlineComponent,
 		ButtonsComponent,
-		MuaOnlineBuoc3NhapOtpComponent,
 	],
 
 
