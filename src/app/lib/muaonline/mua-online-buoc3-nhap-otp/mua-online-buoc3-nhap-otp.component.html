@@ -1,0 +1,22 @@
+<app-banner02 [content]='bannerContent'></app-banner02>
+<section class="online3otp">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-md-6">
+				<div class="input">
+					<label for="check">Vui lòng nhập mã OTP vừa được gửi đến số điện thoại của Quý khách:</label>
+				</div>
+			</div>
+			<div class="col-md-6 mt-3 mt-md-0">
+				<input type="text" name="" id="check" placeholder="****">
+			</div>
+		</div>
+		<!-- buttons -->
+		<app-buttons>
+			<button (click)="backStep()" class="btn-t prev order-3 order-sm-1">Quay lại</button>
+			<button class="btn-t otp order-1 order-sm-2">Cấp lại mã OTP</button>
+			<button (click)="nextStep()" class="btn-t next order-2 order-sm-3">Tiếp tục</button>
+		</app-buttons>
+		<!-- end buttons -->
+	</div>
+</section>

@@ -1,0 +1,113 @@
+/////////////////////////
+///////Include//////////
+@import '../../../sass/var'
+////////////////////////
+
+.stept_4
+	background: #f5f5f5
+	+pad(2rem 0)
+	@media screen and(min-width: 720px)
+		+pad(3.5rem 0 rem(60px) 0)
+	h2 
+		color: $den-1
+		+fw(600)
+		+fz(1.28rem)
+		margin-bottom: 2rem
+	.total
+		background: white
+		+bor-rad(20px)
+		box-shadow: 0px 20px 40px 0px rgba(19, 28, 35, 0.1)
+		+pad(1rem)
+		@media screen and(min-width: 720px)
+			+pad(2rem)
+		table 
+			width: 100%
+			margin-bottom: 1.4rem
+			&:last-child
+				margin-bottom: 0
+			tr 
+				width: 100%
+				th 
+					text-align: left
+					background: #e8f3d7
+					+pad(.7rem 1.4rem)
+					color: $den-1
+					+fz(1.28rem)
+					+fw(600)
+					p 
+						+fw(400)
+					&.cell
+						width: auto
+						@media screen and(min-width: 992px)
+							width: 35%
+				td 
+					border: 1px solid #e5e5e5
+					+pad(1rem)
+					color: #666666
+					&:first-child
+						+fw(700)
+						+fz(1rem)
+						color: $den-1
+						padding-left: rem(21px)
+						@media screen and(min-width: 720px)
+							width: 35%
+	.pric
+		margin-top: 2.8rem
+		+pad(0 15px)
+		@media screen and(min-width: 720px)
+			+pad(0 2.1rem)
+		h4 
+			font-style: italic
+			+fz(1.14rem)
+			color: $den-1
+			+fw(400)
+	.conf
+		margin-top: 1.15rem
+		.check
+			color: $den-1
+			+fz(1.1rem)
+			+fw(bold)
+			label
+				position: relative
+				padding-left: calc(1rem + 6px)
+				+lh(1.5rem)
+				&:after
+					content: ''
+					+pos(abs, 0 null null 0 )
+					display: block
+					width: rem(15px)
+					background: transparent
+					border: 2px solid $xanh-la
+					height: rem(15px)
+					+bor-rad(2px)
+			input 
+				display: none
+				&:checked
+					~ label
+						&:before
+							content: "\f00c"
+							font-family: "Font Awesome 5 Free"
+							font-weight: 600
+							+pos(abs, 0 null null 0 )
+							display: block
+							line-height: 1rem
+							font-size: 1.2rem
+							z-index: 1
+							color: $xanh-la
+		ul 
+			padding-left: 0
+			counter-reset: my-sec-counter
+			@media screen and(min-width: 720px)
+				padding-left: 1.4rem
+			li 
+				margin-top: 1rem
+				p 
+					+fw(500)
+					+fz(1rem)
+					font-style: normal
+					&:before
+						counter-increment: my-sec-counter
+						content: counter(my-sec-counter) "."
+						margin-right: 5px
+						+fw(700)
+						+fz(1rem)
