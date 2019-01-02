@@ -18,13 +18,24 @@
 	.page-title
 		position: absolute
 		bottom: rem(50px)
-		left: 5%
+		left: 0
 		display: inline-block
-		width: auto
+		width: 100%
+		.title
+			position: relative
+			@media screen and (max-width: 767.99px)
+				padding-left: rem(25px)
+				+box-sha(inset 5px 0 0 0 $xanh-la)
+			@media screen and (min-width: 768px)
+				&:before
+					content: ''
+					display: block
+					height: 100%
+					width: 5px
+					background: $xanh-la
+					+pos(abs , 0 null null rem(-25px))
 		h3
 			font-size: rem(25px)
-			box-shadow: -5px 0 0 0 $xanh-la
-			padding-left: rem(20px)
 			font-weight: normal
 			color: #ffffff
 	@media screen and (min-width: 768px)
@@ -38,6 +49,5 @@
 		.page-title
 			bottom: rem(70px)
 			// padding: rem(30px)
-			left: rem(90px)
 			h3
 				font-size: rem(36px)
