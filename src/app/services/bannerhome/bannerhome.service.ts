@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class BannerhomeService {
 	getData(): Observable<any> {
-		return this.http.get('../assets/db/home/homebanner.json');
+		return this.http.get('assets/db/home/homebanner.json');
 	}
 	constructor(private http: HttpClient) { }
 }

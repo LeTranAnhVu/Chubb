@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-import { BannerHome } from '../../interfaces/banner-home';
-import {BannerhomeService} from '../../services/bannerhome/bannerhome.service';
+import { BannerHome } from 'app/interfaces/banner-home';
+import { BannerhomeService } from 'app/services/bannerhome/bannerhome.service';
 
 @Component({
 	selector: 'app-homebanner',
