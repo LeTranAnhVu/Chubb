@@ -3,19 +3,19 @@
         {
             "title": "Trang giao dịch bảo hiểm trực tuyến<br>Chubb Life Việt Nam",
             "description": "",
-            "src": "./assets/img/home/home_slider_1.png",
+            "src": "assets/img/home/home_slider_1.png",
             "url": ""
         },
         {
             "title": "Tham gia bảo hiểm nhân thọ<br>chỉ với 3 thao tác",
             "description": "Chọn gói bảo hiểm phù hợp – Điển thông tin cá nhân – <br> Thanh toán trực tuyến dễ dàng",
-            "src": "./assets/img/home/home_slider_2.jpg",
+            "src": "assets/img/home/home_slider_2.jpg",
             "url": "google.com.vn"
         },
         {
             "title": "Tham gia bảo hiểm nhân thọ<br>chỉ với 3 thao tác",
             "description": "Tự tin chinh phục mọi mục tiêu!",
-            "src": "./assets/img/home/home_slider_3.jpg",
+            "src": "assets/img/home/home_slider_3.jpg",
             "url": "google.com.vn"
         }
     ]
