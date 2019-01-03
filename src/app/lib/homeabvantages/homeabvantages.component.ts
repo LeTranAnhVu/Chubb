@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {AbvantageHome} from '../../interfaces/abvantage-home';
-import {HomeabvantagesService} from '../../services/homeabvantages/homeabvantages.service';
+import { AbvantageHome } from 'app/interfaces/abvantage-home';
+import { HomeabvantagesService } from 'app/services/homeabvantages/homeabvantages.service';
 @Component({
 	selector: 'app-homeabvantages',
 	templateUrl: './homeabvantages.component.html',

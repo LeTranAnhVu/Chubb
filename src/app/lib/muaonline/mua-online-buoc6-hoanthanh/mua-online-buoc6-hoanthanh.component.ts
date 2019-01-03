@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BannerContent_2 } from '../../../interfaces/banner-content-2';
+import { BannerContent_2 } from 'app/interfaces/banner-content-2';
 
 @Component({
   selector: 'app-mua-online-buoc6-hoanthanh',

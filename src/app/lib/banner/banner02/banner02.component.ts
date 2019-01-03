@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { BannerContent_2 } from '../../../interfaces/banner-content-2';
+import { BannerContent_2 } from 'app/interfaces/banner-content-2';
 @Component({
   selector: 'app-banner02',
   templateUrl: './banner02.component.html',
