@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { BannerContent } from '../../../interfaces/banner-content';
+import { BannerContent } from 'app/interfaces/banner-content';
 
 
 @Component({

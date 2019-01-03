@@ -1,5 +1,5 @@
 
-import { ICalendar } from '../interfaces/calendar';
+import { ICalendar } from 'app/interfaces/calendar';
 
 export class CalendarModel {
 	constructor() {
