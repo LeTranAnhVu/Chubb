@@ -3,17 +3,17 @@
         {
             "title": "Đăng ký nhanh chóng",
             "description": "Tiết kiệm thời gian và hạn chế những thủ tục rườm rà.",
-            "src": "assets/img/home/home_icon_1.png"
+            "src": "/assets/img/home/home_icon_1.png"
         },
         {
             "title": "An toàn, tiện dụng",
             "description": "Mọi thông tin của khách hàng sẽ được bảo mật tuyệt đối và an toàn trong suốt quá trình đăng ký.",
-            "src": "assets/img/home/home_icon_2.png"
+            "src": "/assets/img/home/home_icon_2.png"
         },
         {
             "title": "Thủ tục đơn giản",
             "description": "Thủ tục đăng ký tham gia bảo hiểm đơn giản, không cần khám sức khoẻ.",
-            "src": "assets/img/home/home_icon_3.png"
+            "src": "/assets/img/home/home_icon_3.png"
         }
     ]
 }
