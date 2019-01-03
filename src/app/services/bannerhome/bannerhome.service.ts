@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class BannerhomeService {
 	getData(): Observable<any> {
-		return this.http.get('assets/db/home/homebanner.json');
+		return this.http.get('./assets/db/home/homebanner.json');
 	}
 	constructor(private http: HttpClient) { }
 }

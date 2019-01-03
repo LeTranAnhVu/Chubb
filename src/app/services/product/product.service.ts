@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
 	getData(): Observable<any> {
-		return this.http.get('assets/db/home/homeproduct.json');
+		return this.http.get('./assets/db/home/homeproduct.json');
 	}
 	constructor(private http: HttpClient) { }
 }
