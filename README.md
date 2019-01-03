@@ -1,6 +1,16 @@
 # ChubbCode
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+`This project` is using Angular 7 stable version .
+
+## Installation
+
+- `npm install` and `bower update`
+
+## Library
+- [Bootstrap v4.2.x](https://getbootstrap.com/).
+- [Ng-Bootstrap v4.0.1](https://ng-bootstrap.github.io/#/home).
+- [K-sass-core](https://github.com/baonguyenyam/k-sass-core)
 
 ## Development server
 
@@ -22,6 +32,4 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

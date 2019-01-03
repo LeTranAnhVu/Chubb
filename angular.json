@@ -17,10 +17,11 @@
 						"main": "src/main.ts",
 						"tsConfig": "src/tsconfig.app.json",
 						"polyfills": "src/polyfills.ts",
-						"assets": [
-							"src/assets",
-							"src/favicon.ico"
-						],
+						"assets": [{
+							"glob": "**/**/*",
+							"input": "src/assets",
+							"output": "assets"
+						}],
 						"styles": [
 							"src/styles.sass"
 						],
