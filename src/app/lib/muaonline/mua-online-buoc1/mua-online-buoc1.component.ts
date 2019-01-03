@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BannerContent_2 } from '../../../interfaces/banner-content-2';
-import { CalendarModel } from '../../../models/calendar-model';
-import { ICalendar } from '../../../interfaces/calendar';
+import { BannerContent_2 } from 'app/interfaces/banner-content-2';
+import { ICalendar } from 'app/interfaces/calendar';
+import { CalendarModel } from 'app/models/calendar-model';
 
 @Component({
 	selector: 'app-mua-online-buoc1',

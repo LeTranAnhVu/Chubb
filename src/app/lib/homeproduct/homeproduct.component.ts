@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { HomeProduct , HomeroductDetail} from '../../interfaces/product-home';
-import { ProductService } from '../../services/product/product.service';
+import { HomeProduct, HomeroductDetail } from 'app/interfaces/product-home';
+import { ProductService } from 'app/services/product/product.service';
 
 
 

@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { HeaderMenu } from '../../interfaces/header-menu';
-import { HeaderMenuService } from '../../services/header/header-menu.service';
+import { HeaderMenu } from 'app/interfaces/header-menu';
+import { HeaderMenuService } from 'app/services/header/header-menu.service';
 
 @Component({
 	selector: 'app-header',

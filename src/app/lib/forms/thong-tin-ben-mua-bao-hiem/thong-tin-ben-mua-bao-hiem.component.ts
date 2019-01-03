@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CalendarModel } from '../../../models/calendar-model';
-import { ICalendar } from '../../../interfaces/calendar';
+import { ICalendar } from 'app/interfaces/calendar';
+import { CalendarModel } from 'app/models/calendar-model';
 @Component({
 	selector: 'app-thong-tin-ben-mua-bao-hiem',
 	templateUrl: './thong-tin-ben-mua-bao-hiem.component.html',

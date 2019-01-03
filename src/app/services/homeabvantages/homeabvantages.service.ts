@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class HomeabvantagesService {
 	getData(): Observable<any> {
-		return this.http.get('../assets/db/home/homeabvantages.json');
+		return this.http.get('assets/db/home/homeabvantages.json');
 	}
 	constructor(private http: HttpClient) { }
 }
