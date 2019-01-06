@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { BannerContent_2 } from 'app/interfaces/banner-content-2';
 import { ICalendar } from 'app/interfaces/calendar';
@@ -11,8 +11,10 @@ import { CalendarModel } from 'app/models/calendar-model';
 })
 
 export class MuaOnlineBuoc1Component implements OnInit {
-	public calendarModel: ICalendar; 
-	constructor(private router: Router) { 
+	// used viewchild to get the ngForm from this component's html
+	@ViewChild('temForm') form: ElementRef;
+	public calendarModel: ICalendar;
+	constructor(private router: Router) {
 		this.calendarModel = new CalendarModel().getCalendar();
 	}
 	bannerContent: BannerContent_2 = {
@@ -27,8 +29,18 @@ export class MuaOnlineBuoc1Component implements OnInit {
 		this.router.navigate(['/mua-online/mua-online-buoc1']);
 
 	}
+	log(e,t){
+		console.log('log');
+		console.log(e);
+		console.log(t.valid);
+		console.log(t.touched);
+	}
 
 	ngOnInit() {
+		console.log('heheheh');
+		setTimeout(() => {
+			console.log(this.form);
+		}, 1000);
 	}
 
 }
