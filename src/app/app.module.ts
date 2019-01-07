@@ -42,6 +42,8 @@ import { GiaiquyetquyenloiBHComponent } from 'app/pages/giaiquyetquyenloi-bh/gia
 import { HomeComponent } from 'app/pages/home/home.component';
 import { MuaOnlineComponent } from 'app/pages/mua-online/mua-online.component';
 import { ProductComponent } from 'app/pages/product/product.component';
+import { CustomTimeValidatorDirective } from './directives/custom-time-validator/custom-time-validator.directive';
+
 
 
 
@@ -92,7 +94,7 @@ import { ProductComponent } from 'app/pages/product/product.component';
 		Banner02Component,
 		MuaOnlineComponent,
 		ButtonsComponent,
-
+		CustomTimeValidatorDirective,
 	],
 
 

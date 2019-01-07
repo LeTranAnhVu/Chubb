@@ -13,13 +13,13 @@
 				<div class="col-md-6">
 					<div class="form-group">
 						<!-- bidthday -->
-						<div ngModelGroup="birthday">
-							<label>Ngày sinh</label>
+						<div ngModelGroup="birthday" appCustomTimeValidator>
+							<label>Ngày sinh (ngày /tháng /năm)</label>
 							<div class="row">
 								<!-- day -->
 								<div class="col-4">
 									<div class="form-aft">
-										<select required ngModel name="day" id="day" class="form-input">
+										<select required ngModel #day="ngModel" name="day" id="day" class="form-input">
 											<option *ngFor="let day of calendarModel.day" value="{{day}}">{{day}}</option>
 										</select>
 									</div>
@@ -27,7 +27,7 @@
 								<!-- month -->
 								<div class="col-4">
 									<div class="form-aft">
-										<select required ngModel name="month" id="month" class="form-input">
+										<select required ngModel #month="ngModel" name="month" id="month" class="form-input">
 											<option *ngFor="let month of calendarModel.month" value="{{month}}">{{month}}</option>
 
 										</select>
@@ -36,13 +36,18 @@
 								<!-- year -->
 								<div class="col-4">
 									<div class="form-aft">
-										<select required ngModel name="year" id="year" class="form-input">
+										<select required ngModel #year="ngModel" name="year" id="year" class="form-input">
 											<option *ngFor="let year of calendarModel.year" value="{{year}}">{{year}}</option>
 										</select>
 									</div>
 
 								</div>
 							</div>
+							<!-- alert message -->
+							<div class="message-box mt-0" [class.active]="((day.touched && month.touched && year.touched)|| nextStepIsClicked )&& temForm.controls.birthday?.errors">
+								<p class="alert-danger mb-0">Ngày tháng năm sinh không hợp lệ</p>
+							</div>
+							<!-- end alert message -->
 						</div>
 						<!-- end birthday -->
 					</div>
@@ -92,12 +97,12 @@
 							là Việt Nam.</label>
 					</div>
 					<div class="form-check">
-						<input required ngModel name="isAgreePolicy" #isAgreePolicy="ngModel" id="isAgreePolicy" class="form-check-input hidden" type="checkbox" name="check" (change)="log(isAgreePolicy,temForm)">
+						<input required ngModel name="isAgreePolicy" #isAgreePolicy="ngModel" id="isAgreePolicy" class="form-check-input hidden" type="checkbox" name="check">
 						<label class="form-label-check" for="isAgreePolicy">Tôi đồng ý với
 							<a class="policy-link" href="#">điều kiện & Điều khoản.</a>
 						</label>
 					</div>
-					<div class="message-box" [class.active]="isAgreePolicy.dirty && isAgreePolicy.errors?.required">
+					<div class="message-box" [class.active]="(isAgreePolicy.dirty || nextStepIsClicked) && isAgreePolicy.errors?.required">
 						<p class="alert-danger">Vui lòng đánh dấu vào ô “Tôi đồng ý Điều kiện & Điều khoản” nếu Quý khách đã xem qua Điều
 							kiện & Điều khoản của Chubb Life.
 						</p>
@@ -108,7 +113,7 @@
 		<!-- buttons -->
 		<app-buttons>
 			<button (click)="backStep()" class="btn-t prev order-3 order-sm-1">Quay lại</button>
-			<button [disabled]="!temForm.valid" (click)="nextStep()" class="btn-t next order-2 order-sm-3">Tiếp tục</button>
+			<button [class.disable]="!temForm.valid" (click)="nextStep()" class="btn-t next order-2 order-sm-3">Tiếp tục</button>
 		</app-buttons>
 		<!-- end buttons -->
 	</div>
