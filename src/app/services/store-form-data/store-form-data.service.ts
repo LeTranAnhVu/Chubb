@@ -12,7 +12,7 @@ export class StoreFormDataService {
 		this.data = {
 			nguoiDuocBH: {
 				hoTen: '',
-				ngaySinh: '1995-7-15',
+				ngaySinh: '1995-02-15',
 				gioiTinh: '1',
 				dinhKiDongPhi: '2',
 				isVietNamese: true,

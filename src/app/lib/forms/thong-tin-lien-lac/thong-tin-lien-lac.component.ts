@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-thong-tin-lien-lac',
-  templateUrl: './thong-tin-lien-lac.component.html',
-  styleUrls: ['./thong-tin-lien-lac.component.sass']
+	selector: 'app-thong-tin-lien-lac',
+	templateUrl: './thong-tin-lien-lac.component.html',
+	styleUrls: ['./thong-tin-lien-lac.component.sass']
 })
 export class ThongTinLienLacComponent implements OnInit {
+	@ViewChild('temForm') form;
+	constructor() { }
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
 }

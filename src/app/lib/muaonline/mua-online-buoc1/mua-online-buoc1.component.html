@@ -44,9 +44,7 @@
 								</div>
 							</div>
 							<!-- alert message -->
-							<div class="message-box mt-0" [class.active]="((day.touched && month.touched && year.touched)|| nextStepIsClicked )&& temForm.controls.ngaySinh?.errors">
-								<p class="alert-danger mb-0">Ngày tháng năm sinh không hợp lệ</p>
-							</div>
+							<app-validate-message [isActive]="((day.value && month.value && year.value)|| nextStepIsClicked )&& temForm.controls.ngaySinh?.errors" >Ngày tháng năm sinh không hợp lệ</app-validate-message> 
 							<!-- end alert message -->
 						</div>
 						<!-- end birthday -->
@@ -102,11 +100,7 @@
 							<a class="policy-link" href="#">điều kiện & Điều khoản.</a>
 						</label>
 					</div>
-					<div class="message-box" [class.active]="(isAgreePolicy.dirty || nextStepIsClicked) && isAgreePolicy.errors?.required">
-						<p class="alert-danger">Vui lòng đánh dấu vào ô “Tôi đồng ý Điều kiện & Điều khoản” nếu Quý khách đã xem qua Điều
-							kiện & Điều khoản của Chubb Life.
-						</p>
-					</div>
+					<app-validate-message [isActive]="(isAgreePolicy.dirty || nextStepIsClicked) && isAgreePolicy.errors?.required">Vui lòng đánh dấu vào ô “Tôi đồng ý Điều kiện & Điều khoản” nếu Quý khách đã xem qua Điều kiện & Điều khoản của Chubb Life.</app-validate-message>
 				</div>
 			</div>
 		</form>

@@ -1,5 +1,5 @@
 <!-- form -->
-<div class="form">
+<form #temForm="ngForm" class="form">
 	<div class="form-title">
 		<h2>Thông Tin Bên Mua Bảo Hiểm</h2>
 	</div>
@@ -9,43 +9,45 @@
 				<label>Họ và Tên</label>
 				<div class="row">
 					<div class="col-12">
-						<input class="form-input" type="text" placeholder="Nguyễn Văn A">
+						<input required ngModel #name="ngModel" name="hoTenNguoiMua" class="form-input" type="text" placeholder="Họ và Tên">
 					</div>
 				</div>
 			</div>
-			<div class="form-group">
-				<label for="">Loại giấy tờ</label>
-				<div class="row">
-					<div class="col-12">
-						<div class="form-aft">
-							<select class="form-input">
-								<option value="0">CMND/CCCD</option>
-								<option value="1">Passport</option>
-								<option value="2">Khác</option>
-							</select>
+			<div ngModelGroup="giayTo">
+				<div class="form-group">
+					<label for="">Loại giấy tờ </label>
+					<div class="row">
+						<div class="col-12">
+							<div class="form-aft">
+								<select required ngModel #loaiGiayTo="ngModel" name="loaiGiayTo" class="form-input">
+									<option value="1">CMND/CCCD</option>
+									<option value="2">Passport</option>
+									<option value="3">Khác</option>
+								</select>
+							</div>
+
 						</div>
-
 					</div>
 				</div>
-			</div>
 
-			<div class="row">
-				<div class="col-7">
-					<div class="form-group">
-						<label>Nơi cấp</label>
-						<div class="row">
-							<div class="col-12">
-								<input class="form-input" type="text" placeholder="Công An Thành Phố Hồ Chí Minh">
+				<div class="row">
+					<div class="col-7">
+						<div class="form-group">
+							<label>Nơi cấp</label>
+							<div class="row">
+								<div class="col-12">
+									<input required ngModel #noiCap="ngModel" name="noiCapNguoiMua" class="form-input" type="text" placeholder="nhập tên nơi cấp . . .">
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-5">
-					<div class="form-group">
-						<label>Ngày cấp</label>
-						<div class="row">
-							<div class="col-12">
-								<input class="form-input" type="date" placeholder="012345679">
+					<div class="col-5">
+						<div class="form-group">
+							<label>Ngày cấp</label>
+							<div class="row">
+								<div class="col-12">
+									<input required ngModel #ngayCap="ngModel" noiCap name="ngayCap" class="form-input" type="date">
+								</div>
 							</div>
 						</div>
 					</div>
@@ -54,54 +56,61 @@
 		</div>
 		<div class="col-md-6">
 			<div class="form-group">
-				<label>Ngày sinh</label>
-				<div class="row">
-					<div class="col-4">
-						<div class="form-aft">
-							<select name="day" class="form-input">
-								<option *ngFor="let day of calendarModel.day" value="day">{{day}}</option>
-							</select>
+				<!-- bidthday -->
+				<div ngModelGroup="ngaySinh" appCustomTimeValidator>
+					<label>Ngày sinh (ngày /tháng /năm)</label>
+					<div class="row">
+						<!-- day -->
+						<div class="col-4">
+							<div class="form-aft">
+								<select required ngModel #day="ngModel" name="day" id="day" class="form-input">
+									<option *ngFor="let day of calendarModel.day" value="{{day}}">{{day}}</option>
+								</select>
+							</div>
 						</div>
+						<!-- month -->
+						<div class="col-4">
+							<div class="form-aft">
+								<select required ngModel #month="ngModel" name="month" id="month" class="form-input">
+									<option *ngFor="let month of calendarModel.month" value="{{month}}">{{month}}</option>
 
-					</div>
-					<div class="col-4">
-						<div class="form-aft">
-							<select name="month" class="form-input">
-								<option *ngFor="let month of calendarModel.month" value="month">{{month}}</option>
-
-							</select>
+								</select>
+							</div>
 						</div>
+						<!-- year -->
+						<div class="col-4">
+							<div class="form-aft">
+								<select required ngModel #year="ngModel" name="year" id="year" class="form-input">
+									<option *ngFor="let year of calendarModel.year" value="{{year}}">{{year}}</option>
+								</select>
+							</div>
 
-					</div>
-					<div class="col-4">
-						<div class="form-aft">
-							<select name="year" class="form-input">
-								<option *ngFor="let year of calendarModel.year" value="year">{{year}}</option>
-
-
-							</select>
 						</div>
-
 					</div>
+					<!-- alert message -->
+					<app-validate-message [isActive]="((day.value && month.value && year.value)|| nextStepIsClicked )&& temForm.controls.ngaySinh?.errors">Ngày
+						tháng năm sinh không hợp lệ</app-validate-message>
+					<!-- end alert message -->
 				</div>
-
+				<!-- end birthday -->
 			</div>
 			<div class="form-group">
-				<label for="">Giới tính</label>
+				<label>Giới tính</label>
 				<div class="row">
 					<div class="col-12">
 						<div class="form-aft">
-							<select class="form-input">
-								<option value="0">Nam</option>
-								<option value="1">Nữ</option>
-								<option value="2">Khác</option>
+							<select required ngModel name="gioiTinh" class="form-input" id="sex01">
+								<option value="1">Nam</option>
+								<option value="2">Nữ</option>
+								<option value="3">Khác</option>
 							</select>
 						</div>
-
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+	<div>{{temForm.value | json}}</div>
+	<div>{{temForm.valid}}</div>
+</form>
 <!-- end form -->

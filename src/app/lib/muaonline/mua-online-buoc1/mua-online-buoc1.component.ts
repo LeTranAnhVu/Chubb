@@ -43,7 +43,6 @@ export class MuaOnlineBuoc1Component implements OnInit, AfterViewInit {
 		if (this.nextStepIsClicked === false) {
 			this.nextStepIsClicked = true;
 		}
-		console.log(this.form);
 
 		if ((<any>this.form).valid) {
 			// collect data

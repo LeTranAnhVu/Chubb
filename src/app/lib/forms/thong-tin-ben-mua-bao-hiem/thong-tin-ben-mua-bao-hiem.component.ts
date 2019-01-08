@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ICalendar } from 'app/interfaces/calendar';
 import { CalendarModel } from 'app/models/calendar-model';
 @Component({
@@ -7,6 +7,8 @@ import { CalendarModel } from 'app/models/calendar-model';
 	styleUrls: ['./thong-tin-ben-mua-bao-hiem.component.sass']
 })
 export class ThongTinBenMuaBaoHiemComponent implements OnInit {
+
+	@ViewChild('temForm') form;
 	calendarModel: ICalendar;
 	constructor() {
 		this.calendarModel = new CalendarModel().getCalendar();
