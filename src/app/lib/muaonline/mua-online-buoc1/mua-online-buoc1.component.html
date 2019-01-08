@@ -13,7 +13,7 @@
 				<div class="col-md-6">
 					<div class="form-group">
 						<!-- bidthday -->
-						<div ngModelGroup="birthday" appCustomTimeValidator>
+						<div ngModelGroup="ngaySinh" appCustomTimeValidator>
 							<label>Ngày sinh (ngày /tháng /năm)</label>
 							<div class="row">
 								<!-- day -->
@@ -44,7 +44,7 @@
 								</div>
 							</div>
 							<!-- alert message -->
-							<div class="message-box mt-0" [class.active]="((day.touched && month.touched && year.touched)|| nextStepIsClicked )&& temForm.controls.birthday?.errors">
+							<div class="message-box mt-0" [class.active]="((day.touched && month.touched && year.touched)|| nextStepIsClicked )&& temForm.controls.ngaySinh?.errors">
 								<p class="alert-danger mb-0">Ngày tháng năm sinh không hợp lệ</p>
 							</div>
 							<!-- end alert message -->
@@ -97,7 +97,7 @@
 							là Việt Nam.</label>
 					</div>
 					<div class="form-check">
-						<input required ngModel name="isAgreePolicy" #isAgreePolicy="ngModel" id="isAgreePolicy" class="form-check-input hidden" type="checkbox" name="check">
+						<input required ngModel name="isAgreePolicy" #isAgreePolicy="ngModel" id="isAgreePolicy" class="form-check-input hidden" type="checkbox">
 						<label class="form-label-check" for="isAgreePolicy">Tôi đồng ý với
 							<a class="policy-link" href="#">điều kiện & Điều khoản.</a>
 						</label>
@@ -118,4 +118,5 @@
 		<!-- end buttons -->
 	</div>
 	<div>{{temForm.value | json}}</div>
+	
 </section>

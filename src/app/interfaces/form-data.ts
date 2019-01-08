@@ -1,4 +1,4 @@
-export interface FormData {
+export interface IFormData {
 	nguoiDuocBH: {
 		hoTen: string,
 		ngaySinh: string,

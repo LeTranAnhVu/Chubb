@@ -9,7 +9,7 @@
 				<label>Họ và Tên</label>
 				<div class="row">
 					<div class="col-12">
-						<input class="form-input" type="text" placeholder="Nguyễn Văn A">
+						<input class="form-input" type="text" placeholder="Nguyễn Văn A" >
 					</div>
 				</div>
 			</div>
@@ -19,9 +19,9 @@
 					<div class="col-12">
 						<div class="form-aft">
 							<select class="form-input">
-								<option value="0">CMND/CCCD</option>
-								<option value="1">Passport</option>
-								<option value="2">Khác</option>
+								<option value="1">CMND/CCCD</option>
+								<option value="2">Passport</option>
+								<option value="3">Khác</option>
 							</select>
 						</div>
 
@@ -57,7 +57,7 @@
 				<label>Ngày sinh</label>
 				<div class="row">
 					<div class="col-12">
-						<input class="form-input" type="date" placeholder="012345679">
+						<input class="form-input" type="date" [value]="filledForm?.ngaySinh" disabled>
 					</div>
 				</div>
 			</div>
@@ -65,10 +65,10 @@
 				<label for="">Giới tính</label>
 				<div class="row">
 					<div class="col-12">
-						<select class="form-input">
-							<option value="0">Nam</option>
-							<option value="1">Nữ</option>
-							<option value="2">Khác</option>
+						<select class="form-input" [value]="filledForm?.gioiTinh" disabled>
+							<option value="1">Nam</option>
+							<option value="2">Nữ</option>
+							<option value="3">Khác</option>
 						</select>
 					</div>
 				</div>
