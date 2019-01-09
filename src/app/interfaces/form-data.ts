@@ -28,4 +28,5 @@ export interface IFormData {
 		soDienThoai: string,
 		email: string
 	};
+	cacDieuKhoanThoaYeuCau: boolean;
 }
