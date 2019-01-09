@@ -20,7 +20,6 @@ export class MuaOnlineBuoc1Component implements OnInit, AfterViewInit {
 	calendarModel: ICalendar;
 
 	// this property is used to flaging the html message
-	isGoodBirthday = true;
 	nextStepIsClicked = false;
 
 	// this value is used to show in html

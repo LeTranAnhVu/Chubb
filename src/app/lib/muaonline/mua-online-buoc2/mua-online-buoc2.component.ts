@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { BannerContent_2 } from 'app/interfaces/banner-content-2';
 import { ThongTinBenMuaBaoHiemComponent } from '../../forms/thong-tin-ben-mua-bao-hiem/thong-tin-ben-mua-bao-hiem.component';
@@ -9,11 +9,13 @@ import { ThongTinNguoiDuocBaoHiemComponent } from '../../forms/thong-tin-nguoi-d
 	templateUrl: './mua-online-buoc2.component.html',
 	styleUrls: ['./mua-online-buoc2.component.sass']
 })
-export class MuaOnlineBuoc2Component implements OnInit, AfterViewInit {
+export class MuaOnlineBuoc2Component implements OnInit {
+
 	@ViewChild(ThongTinNguoiDuocBaoHiemComponent) form1;
 	@ViewChild(ThongTinBenMuaBaoHiemComponent) form2;
 	@ViewChild(ThongTinLienLacComponent) form3;
 
+	private nextStepIsClicked = false;
 	isAllFormsValid: boolean;
 	constructor(private router: Router) { }
 	bannerContent: BannerContent_2 = {
@@ -21,15 +23,21 @@ export class MuaOnlineBuoc2Component implements OnInit, AfterViewInit {
 		subTitle: 'Các bước mua online'
 	};
 	nextStep(): void {
-		console.log('in form 2');
-		console.log('in form 2');
-		console.log(this.form1.form.value);
-		console.log(this.form2.form.value);
-		console.log(this.form3.form.value);
-		// console.log('not doing');
+
+		if (!this.nextStepIsClicked) {
+			this.nextStepIsClicked = true;
+		}
+
+
+		// validate
 		if (this.form1.form.valid && this.form2.form.valid && this.form3.form.valid) {
-			this.isAllFormsValid = true;
-			this.router.navigate(['/mua-online/mua-online-buoc3']);
+			// collect data
+			if (this.form1.collectData() && this.form2.collectData() && this.form3.collectData()) {
+				// saved data success
+				// navigate to next step
+				this.isAllFormsValid = true;
+				this.router.navigate(['/mua-online/mua-online-buoc3']);
+			}
 		} else {
 			this.isAllFormsValid = false;
 		}
@@ -41,16 +49,6 @@ export class MuaOnlineBuoc2Component implements OnInit, AfterViewInit {
 
 	ngOnInit() {
 	}
-	ngAfterViewInit() {
-		// ExpressionChangedAfterItHasBeenCheckedError
-		// console.log(this.form1.form.value);
-		// console.log(this.form2.form.value);
-		// console.log(this.form3.form.value);
-		// if (this.form1.form.valid && this.form2.form.valid && this.form3.form.valid) {
-		// 	this.isAllFormsValid = true;
-		// } else {
-		// 	this.isAllFormsValid = false;
-		// }
-	}
+	
 
 }
