@@ -27,7 +27,7 @@
 						</tr>
 						<tr>
 							<td>• Họ và tên </td>
-							<td>NGUYỄN VĂN A</td>
+							<td>{{data.nguoiMuaBH.hoTen}}</td>
 						</tr>
 						<tr>
 							<td>• CMND/ CCCD/ Hộ chiếu/ Khai sinh số </td>
@@ -41,8 +41,7 @@
 						</tr>
 						<tr>
 							<td>• Họ và tên </td>
-							<td>NGUYỄN THỊ B
-							</td>
+							<td>{{data.nguoiDuocBH.hoTen}}</td>
 						</tr>
 						<tr>
 							<td>• CMND/ CCCD/ Hộ chiếu/ Khai sinh số </td>
@@ -50,11 +49,11 @@
 						</tr>
 						<tr>
 							<td>• Ngày sinh </td>
-							<td>dd/mm/yyyy</td>
+							<td>{{data.nguoiDuocBH.ngaySinh}}</td>
 						</tr>
 						<tr>
 							<td>• Giới tính </td>
-							<td>Nữ</td>
+							<td>{{data.nguoiDuocBH.gioiTinh == 1 ? 'nam': 'nữ'}}</td>
 						</tr>
 					</table>
 					<!-- end-table-3 -->
@@ -64,8 +63,7 @@
 						</tr>
 						<tr>
 							<td>• Họ và tên </td>
-							<td>NGUYỄN VĂN A
-							</td>
+							<td>{{data.nguoiMuaBH.hoTen}}</td>
 						</tr>
 						<tr>
 							<td>• CMND/ CCCD/ Hộ chiếu/ Khai sinh số </td>
@@ -91,7 +89,7 @@
 						</tr>
 						<tr>
 							<td>• Định kỳ đóng bảo hiểm </td>
-							<td>Năm</td>
+							<td>{{data.nguoiDuocBH.dinhKiDongPhi == 1 ? 'hằng năm': 'hằng tháng'}}</td>
 						</tr>
 					</table>
 					<!-- end-table-5 -->
@@ -107,7 +105,7 @@
 						này. Xin lưu ý rằng Khách hàng không thể tiếp tục mà không đánh dấu vào ô dưới đây.</h4>
 					<div class="conf">
 						<div class="check">
-							<input type="checkbox" name="" id="check">
+							<input type="checkbox" [checked]= "isAgree" (change)="isAgree = !isAgree" id="check">
 							<label for="check">Tôi xác nhận đồng ý và cam kết rằng:</label>
 						</div>
 						<ul>
@@ -140,7 +138,7 @@
 		<!-- buttons -->
 		<app-buttons>
 			<button (click)="backStep()" class="btn-t prev order-3 order-sm-1">Quay lại</button>
-			<button (click)="nextStep()" class="btn-t next order-2 order-sm-3">Tiếp tục</button>
+			<button [class.disable]="!isAgree" (click)="nextStep()" class="btn-t next order-2 order-sm-3">Tiếp tục</button>
 		</app-buttons>
 		<!-- end buttons -->
 	</div>

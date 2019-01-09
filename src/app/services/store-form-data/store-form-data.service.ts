@@ -39,7 +39,9 @@ export class StoreFormDataService {
 				soDienThoai: '0934005431',
 				email: 'trangthupham_02051998@gmail.com'
 			},
-			cacDieuKhoanThoaYeuCau: null
+			cacDieuKhoanThoaYeuCau: null,
+			finalAgree: null,
+			hinhThucThanhToan: ''
 		};
 	}
 	setValue(key, value): boolean {

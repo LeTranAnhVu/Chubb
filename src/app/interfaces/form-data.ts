@@ -29,4 +29,6 @@ export interface IFormData {
 		email: string
 	};
 	cacDieuKhoanThoaYeuCau: boolean;
+	finalAgree: boolean;
+	hinhThucThanhToan: string;
 }
