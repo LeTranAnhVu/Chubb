@@ -11,33 +11,33 @@ export class StoreFormDataService {
 	constructor() {
 		this.data = {
 			nguoiDuocBH: {
-				hoTen: 'Lê Trần Anh Vũ',
-				ngaySinh: '1995-02-15',
-				gioiTinh: '1',
-				dinhKiDongPhi: '2',
+				hoTen: '',
+				ngaySinh: '',
+				gioiTinh: '',
+				dinhKiDongPhi: '',
 				isVietNamese: true,
-				isAgreePolicy: true,
+				isAgreePolicy: false,
 				giayTo: {
-					loaiGiayTo: '2',
-					noiCap: 'Tp Hồ Chí Minh',
-					ngayCap: '2010-12-30'
+					loaiGiayTo: '',
+					noiCap: '',
+					ngayCap: ''
 				}
 			},
 			nguoiMuaBH: {
-				hoTen: 'phạm thi thu trang',
-				ngaySinh: '1998-02-05',
-				gioiTinh: '2',
+				hoTen: '',
+				ngaySinh: '',
+				gioiTinh: '',
 				giayTo: {
-					loaiGiayTo: '1',
-					noiCap: 'bến tre',
-					ngayCap: '2013-04-12'
+					loaiGiayTo: '',
+					noiCap: '',
+					ngayCap: ''
 				}
 
 			},
 			thongTinLienLac: {
-				diaChi: '112/85/9 ĐƯỜNG Thống Nhất; Phường 15, Quận Gò Vấp; Tp Hồ Chí Minh',
-				soDienThoai: '0934005431',
-				email: 'trangthupham_02051998@gmail.com'
+				diaChi: '',
+				soDienThoai: '',
+				email: ''
 			},
 			cacDieuKhoanThoaYeuCau: null,
 			finalAgree: null,

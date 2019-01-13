@@ -9,7 +9,7 @@ import { StoreFormDataService } from 'app/services/store-form-data/store-form-da
 export class ThongTinNguoiDuocBaoHiemComponent implements OnInit, AfterViewInit {
 	@ViewChild('temForm') form;
 	// properties
-	private filledForm: any;
+	filledForm: any;
 	constructor(
 		private storeData: StoreFormDataService
 	) {

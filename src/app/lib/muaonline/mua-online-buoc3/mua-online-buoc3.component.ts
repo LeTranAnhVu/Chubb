@@ -28,7 +28,7 @@ const contents = [
 export class MuaOnlineBuoc3Component implements OnInit, AfterViewInit {
 	@ViewChild('temForm') form;
 
-	private nextStepIsClicked = false;
+	nextStepIsClicked = false;
 	isFormValid: boolean;
 	contents = contents;
 	constructor(

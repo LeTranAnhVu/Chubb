@@ -15,7 +15,7 @@ export class MuaOnlineBuoc2Component implements OnInit {
 	@ViewChild(ThongTinBenMuaBaoHiemComponent) form2;
 	@ViewChild(ThongTinLienLacComponent) form3;
 
-	private nextStepIsClicked = false;
+	nextStepIsClicked = false;
 	isAllFormsValid: boolean;
 	constructor(private router: Router) { }
 	bannerContent: BannerContent_2 = {

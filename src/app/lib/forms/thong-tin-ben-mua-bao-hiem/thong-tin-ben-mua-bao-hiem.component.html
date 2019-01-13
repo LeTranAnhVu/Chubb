@@ -88,7 +88,7 @@
 						</div>
 					</div>
 					<!-- alert message -->
-					<app-validate-message [isActive]="((day.value && month.value && year.value)|| nextStepIsClicked )&& temForm.controls.ngaySinh?.errors">Ngày
+					<app-validate-message [isActive]="((day.value && month.value && year.value) )&& temForm.controls.ngaySinh?.errors">Ngày
 						tháng năm sinh không hợp lệ</app-validate-message>
 					<!-- end alert message -->
 				</div>
@@ -110,7 +110,7 @@
 			</div>
 		</div>
 	</div>
-	<div>{{temForm.value | json}}</div>
-	<div>{{temForm.valid}}</div>
+	<!-- <div>{{temForm.value | json}}</div> -->
+	
 </form>
 <!-- end form -->
