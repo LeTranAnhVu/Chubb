@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { StoreFormDataService } from 'app/services/store-form-data/store-form-data.service';
 
 let links = [
 	'/mua-online/mua-online-buoc1',
@@ -23,7 +24,10 @@ export class MuaOnlineComponent implements OnInit {
 	prevLink: string;
 	cursor = 0;
 
-	constructor(private router: Router) {
+	constructor(
+		private router: Router,
+		private storeData: StoreFormDataService
+		) {
 		this.links = links;
 	}
 

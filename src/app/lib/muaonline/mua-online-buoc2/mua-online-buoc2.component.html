@@ -5,10 +5,11 @@
 		<app-thong-tin-nguoi-duoc-bao-hiem></app-thong-tin-nguoi-duoc-bao-hiem>
 		<app-thong-tin-ben-mua-bao-hiem></app-thong-tin-ben-mua-bao-hiem>
 		<app-thong-tin-lien-lac></app-thong-tin-lien-lac>
+		<app-validate-message [isActive]="nextStepIsClicked && (form1.form.invalid || form2.form.invalid || form3.form.invalid)">Vui lòng điền đủ thông tin</app-validate-message>
 		<!-- buttons -->
 		<app-buttons>
 			<button (click)="backStep()" class="btn-t prev order-3 order-sm-1">Quay lại</button>
-			<button (click)="nextStep()" class="btn-t next order-2 order-sm-3">Tiếp tục</button>
+			<button [class.disable]="form1.form.invalid || form2.form.invalid || form3.form.invalid" (click)="nextStep()" class="btn-t next order-2 order-sm-3">Tiếp tục</button>
 		</app-buttons>
 		<!-- end buttons -->
 	</div>

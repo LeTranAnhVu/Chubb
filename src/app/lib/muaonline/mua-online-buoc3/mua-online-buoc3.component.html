@@ -3,113 +3,58 @@
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<table>
-					<tr>
-						<th class="title">
-							Vui lòng đánh dấu vào ô thích hợp trong bảng câu hỏi dưới đây :
-						</th>
-						<td class="bor-bot">
-							Lựa chọn:
-						</td>
-					</tr>
-					<tr>
-						<th>
-							<p>Người được Bảo hiểm có bao giờ bị hoặc đang được theo dõi do nghi ngờ bị: ung thư bất kỳ cơ quan/nội
-								tạng nào; nổi u/hạch ở cổ, vú, nách, bẹn; bị polyp, u, nhân hoặc nang bất kỳ cơ quan/nội tạng nào; hoặc
-								bệnh gan, viêm gan?</p>
-
-						</th>
-						<td>
-							<ul>
-								<li>
-									<input type="radio" name="check1" id="check1" checked>
-									<label for="check1">Không</label>
-								</li>
-							</ul>
-							<span>|</span>
-							<ul>
-								<li>
-									<input type="radio" name="check1" id="check2">
-									<label for="check2">Có</label>
-								</li>
-							</ul>
-						</td>
-					</tr>
-					<tr>
-						<th>
-							<p>Trong vòng 05 năm vừa qua, Người được Bảo hiểm có đang được theo dõi/được đề nghị theo dõi do có kết
-								quả bất thường khi xét nghiệm máu, xét nghiệm nước tiểu, xét nghiệm phân, siêu âm, xét nghiệm tế bào cổ
-								tử cung (Pap smear), chụp nhũ ảnh, nội soi, chụp cắt lớp (CT scan), chụp cộng hưởng từ hạt nhân (MRI)
-								hoặc có bất thường khi thăm khám tuyến tiền liệt không?</p>
-
-						</th>
-						<td>
-							<ul>
-								<li>
-									<input type="radio" name="check2" id="check3" checked>
-									<label for="check3">Không</label>
-								</li>
-							</ul>
-							<span>|</span>
-							<ul>
-								<li>
-									<input type="radio" name="check2" id="check4">
-									<label for="check4">Có</label>
-								</li>
-							</ul>
-						</td>
-					</tr>
-					<tr>
-						<th>
-							<p>Người được Bảo hiểm có bao giờ bị hoặc được chẩn đoán hoặc điều trị bệnh lý bẩm sinh hoặc bệnh lý về
-								di truyền không ?</p>
-
-						</th>
-						<td>
-							<ul>
-								<li>
-									<input type="radio" name="check3" id="check5" checked>
-									<label for="check5">Không</label>
-								</li>
-							</ul>
-							<span>|</span>
-							<ul>
-								<li>
-									<input type="radio" name="check3" id="check6">
-									<label for="check6">Có</label>
-								</li>
-							</ul>
-						</td>
-					</tr>
-					<tr>
-						<th>
-							<p>Người được Bảo hiểm đã có hoặc đang tham gia Sản phẩm Bảo hiểm hỗ trợ điều trị ung thư - C Care
-								và/hoặc Quyền lợi bảo hiểm hỗ trợ tài chính toàn diện điều trị bệnh ung thư của Chubb Life không?</p>
-
-						</th>
-						<td>
-							<ul>
-								<li>
-									<input type="radio" name="check4" id="check7" checked>
-									<label for="check7">Không</label>
-								</li>
-							</ul>
-							<span>|</span>
-							<ul>
-								<li>
-									<input type="radio" name="check4" id="check8">
-									<label for="check8">Có</label>
-								</li>
-							</ul>
-						</td>
-					</tr>
-				</table>
+				<form #temForm="ngForm" (change)="onChange()">
+					<table>
+						<tr>
+							<th class="title">
+								Vui lòng đánh dấu vào ô thích hợp trong bảng câu hỏi dưới đây :
+							</th>
+							<td class="bor-bot">
+								Lựa chọn:
+							</td>
+						</tr>
+						<!-- test -->
+						<tr *ngFor="let content of contents; let i = index">
+							<th>
+								<p>{{content}}</p>
+							</th>
+							<td>
+								<ul>
+									<li>
+										<input 
+											ngModel
+											[name]="'check'+i"
+											[value]="0"
+											type="radio" 
+											[id]="'check'+i">
+										<label [for]="'check'+i">Không</label>
+									</li>
+								</ul>
+								<span>|</span>
+								<ul>
+									<li>
+										<input
+										ngModel
+										[name]="'check'+i"
+										[value]="1" 
+										type="radio" 
+										[id]="'check'+(i+100)">
+										<label [for]="'check'+(i+100)">Có</label>
+									</li>
+								</ul>
+							</td>
+							</tr>
+						<!-- end test -->
+					</table>
+				</form>
 			</div>
+			
 		</div>
+		<app-validate-message [isActive]="(nextStepIsClicked || temForm.dirty) && !isFormValid">Các trường hợp trên phải lựa chọn KHÔNG. </app-validate-message>
 		<!-- buttons -->
 		<app-buttons>
 			<button (click)="backStep()" class="btn-t prev order-3 order-sm-1">Quay lại</button>
-			<button (click)="nextStep()" class="btn-t next order-2 order-sm-3">Tiếp tục</button>
+			<button [class.disable]="!isFormValid" (click)="nextStep()" class="btn-t next order-2 order-sm-3">Tiếp tục</button>
 		</app-buttons>
 		<!-- end buttons -->
 	</div>

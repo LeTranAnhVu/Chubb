@@ -1,64 +1,55 @@
 <!-- form -->
-<div class="form">
+<form #temForm="ngForm" class="form">
 	<div class="form-title">
 		<h2>Thông Tin Liên Lạc</h2>
 	</div>
 	<div class="row">
 		<div class="col-md-6">
-			<div class="form-group">
-				<label>Số nhà/ Đường/ Thôn/ Xóm/ Ngõ/ Ấp</label>
-				<div class="row">
-					<div class="col-12">
-						<input class="form-input" type="text" placeholder="156 Nguyễn Ảnh Thủ">
-					</div>
-				</div>
-			</div>
-			<div class="form-group">
-				<label>Phường/ Xã & Quận/ Huyện/ Thị xã/ TP thuộc tỉnh</label>
-				<div class="row">
-					<div class="col-12">
-						<input class="form-input" type="text" placeholder="Phường Đakao, Quận 1">
-					</div>
-				</div>
-			</div>
-			<div class="form-group">
-				<label>Tỉnh/ TP trực thuộc trung ương</label>
-				<div class="row">
-					<div class="col-12">
-						<div class="form-aft">
-							<select name="day" class="form-input">
-								<option value="1">01</option>
-								<option value="2">02</option>
-								<option value="3">03</option>
-								<option value="4">04</option>
-								<option value="5">05</option>
-								<option value="6">06</option>
-								<option value="7">07</option>
-								<option value="8">08</option>
-								<option value="9">09</option>
-								<option value="10">10</option>
-								<option value="11">11</option>
-								<option value="12">12</option>
-								<option value="13">13</option>
-								<option value="14">14</option>
-								<option value="15">15</option>
-								<option value="16">16</option>
-								<option value="17">17</option>
-								<option value="18">18</option>
-								<option value="19">19</option>
-								<option value="20">20</option>
-								<option value="21">21</option>
-								<option value="22">22</option>
-								<option value="23">23</option>
-								<option value="24">24</option>
-								<option value="25">25</option>
-								<option value="26">26</option>
-								<option value="27">27</option>
-								<option value="28">28</option>
-								<option value="29">29</option>
-							</select>
+			<div ngModelGroup="diaChi">
+				<div class="form-group">
+					<label>Số nhà/ Đường/ Thôn/ Xóm/ Ngõ/ Ấp</label>
+					<div class="row">
+						<div class="col-12">
+							<input 
+								required 
+								ngModel 
+								name="diaChi01" 
+								#diaChi01="ngModel" 
+								class="form-input" 
+								type="text" 
+								placeholder="Địa chỉ">
 						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label>Phường/ Xã & Quận/ Huyện/ Thị xã/ TP thuộc tỉnh</label>
+					<div class="row">
+						<div class="col-12">
+							<input 
+								required 
+								ngModel 
+								name="diaChi02" 
+								#diaChi02="ngModel" 
+								class="form-input" 
+								type="text" 
+								placeholder="....">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label>Tỉnh/ TP trực thuộc trung ương</label>
+					<div class="row">
+						<div class="col-12">
+							<div class="form-aft">
+								<input 
+									required 
+									ngModel 
+									name="diaChi03" 
+									#diaChi03="ngModel" 
+									class="form-input" type="text">
+							</div>
 
+						</div>
 					</div>
 				</div>
 			</div>
@@ -68,7 +59,14 @@
 				<label>Số điện thoại nhận SMS/ OTP</label>
 				<div class="row">
 					<div class="col-12">
-						<input class="form-input er-form" type="text" placeholder="09354515525">
+						<input 
+							required 
+							ngModel 
+							name="soDienThoai" 
+							#soDienThoai="ngModel" 
+							class="form-input" 
+							type="text" 
+							placeholder="mời nhập số điện thoại">
 					</div>
 				</div>
 			</div>
@@ -76,23 +74,21 @@
 				<label>Email</label>
 				<div class="row">
 					<div class="col-12">
-						<input class="form-input" type="email" placeholder="abc@xyz.com">
+						<input 
+							required 
+							ngModel 
+							name="email" 
+							#email="ngModel" 
+							class="form-input" 
+							type="email" 
+							placeholder="abc@xyz.com">
 					</div>
 				</div>
 			</div>
 
 		</div>
 	</div>
-	<div class="err">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<p style="color:red">
-						Vui lòng điền tất cả thông tin
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+	<div>{{temForm.value | json}}</div>
+	<div>{{temForm.valid}}</div>
+</form>
 <!-- end form -->
