@@ -1,3 +1,4 @@
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -43,10 +44,8 @@ import { HomeComponent } from 'app/pages/home/home.component';
 import { MuaOnlineComponent } from 'app/pages/mua-online/mua-online.component';
 import { ProductComponent } from 'app/pages/product/product.component';
 import { CustomTimeValidatorDirective } from './directives/custom-time-validator/custom-time-validator.directive';
-import { ValidateMessageComponent } from './lib/validate-message/validate-message.component';
 import { HasTouchedAllDirective } from './directives/has-touched-all/has-touched-all.directive';
-
-
+import { ValidateMessageComponent } from './lib/validate-message/validate-message.component';
 
 
 
@@ -110,7 +109,9 @@ import { HasTouchedAllDirective } from './directives/has-touched-all/has-touched
 
 		BrowserAnimationsModule
 	],
-	providers: [],
+	providers: [
+		{provide: LocationStrategy, useClass: HashLocationStrategy} // sovled 404 page not found on refresh while deployment
+	],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
